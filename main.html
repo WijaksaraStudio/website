@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wijaksara Studio Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --black: #181818;
+      --gold: #ffd700;
+      --gold-dark: #bfa100;
+      --white: #ffffff;
+      --gray: #222222;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: var(--black);
+      color: var(--white);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+    header {
+      background: var(--gray);
+      padding: 1.5rem 0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: 1px;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+    .nav-links a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a.active,
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+    .section {
+      padding: 4rem 0;
+      display: none;
+      animation: fadeIn 0.6s ease-in-out;
+    }
+    .section.active {
+      display: block;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Home */
+    .home-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+    .home-desc {
+      font-size: 1.125rem;
+      max-width: 640px;
+      margin-bottom: 2rem;
+      color: #dddddd;
+    }
+    .product-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .product-card {
+      background: var(--gray);
+      border: 2px solid var(--gold-dark);
+      border-radius: 16px;
+      padding: 1.5rem;
+      flex: 1 1 260px;
+      max-width: 360px;
+      transition: 0.2s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    .product-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--gold);
+      box-shadow: 0 8px 24px rgba(255, 215, 0, 0.15);
+    }
+    .product-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+    }
+
+    /* Roles */
+    .roles-title {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 2rem;
+    }
+    .role-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .role-card {
+      background: linear-gradient(135deg, var(--gray), var(--gold-dark));
+      border: 2px solid var(--gold);
+      border-radius: 18px;
+      padding: 2rem;
+      width: 280px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      text-align: center;
+    }
+    .role-card:hover,
+    .role-card.selected {
+      transform: translateY(-5px) scale(1.03);
+      box-shadow: 0 6px 20px rgba(255, 215, 0, 0.15);
+    }
+    .role-icon {
+      font-size: 2.5rem;
+      color: var(--gold);
+      margin-bottom: 0.75rem;
+    }
+    .role-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .role-desc {
+      font-size: 1rem;
+      color: #ddd;
+    }
+
+    /* Contact */
+    .contact-info {
+      background: var(--gray);
+      border-radius: 16px;
+      padding: 2rem;
+      max-width: 500px;
+      margin: 0 auto;
+      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.12);
+      border: 1.5px solid var(--gold-dark);
+      text-align: center;
+    }
+    .contact-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+    .contact-detail {
+      margin-bottom: 0.75rem;
+      font-size: 1.1rem;
+    }
+    .contact-detail span {
+      font-weight: 600;
+      color: var(--gold);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem 0;
+      background: var(--gray);
+      font-size: 1rem;
+      color: var(--gold-dark);
+      margin-top: 3rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .product-list, .role-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+      .product-card, .role-card {
+        width: 100%;
+        max-width: 400px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">Wijaksara Studio</div>
+        <div class="nav-links">
+          <a href="#" class="active" data-section="home">Home</a>
+          <a href="#" data-section="roles">Roles</a>
+          <a href="#" data-section="contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="home" class="section active">
+      <div class="home-title">Welcome to Wijaksara Studio</div>
+      <div class="home-desc">
+        Wijaksara Studio is a modern creative studio that combines technology and creativity to build tailored digital solutions. We specialize in developing custom applications, websites, games, and office data tools to meet your specific needs.
+      </div>
+      <div class="product-list">
+        <div class="product-card">
+          <div class="product-title">Applications & Websites</div>
+          <div>We build responsive, modern, and secure web and mobile apps for businesses and individuals.</div>
+        </div>
+        <div class="product-card">
+          <div class="product-title">Office Documents</div>
+          <div>Professional creation of Office documents, including Word, Excel, and PowerPoint presentations.</div>
+        </div>
+        <div class="product-card">
+          <div class="product-title">Game Development</div>
+          <div>Design and develop custom games or provide game assets for your project.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="roles" class="section">
+      <div class="roles-title">Choose Your Role</div>
+      <div class="role-cards">
+        <div class="role-card" data-role="warrior">
+          <div class="role-icon">🗡️</div>
+          <div class="role-title">Warrior (Developer)</div>
+          <div class="role-desc">A digital fighter who builds tech solutions and systems with the power of code.</div>
+        </div>
+        <div class="role-card" data-role="wizard">
+          <div class="role-icon">🪄</div>
+          <div class="role-title">Wizard (Artisan)</div>
+          <div class="role-desc">A creative wizard crafting stunning artworks, designs, and handmade products.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="contact-info">
+        <div class="contact-title">Contact Information</div>
+        <div class="contact-detail"><span>Email:</span> wijaksara.studio@gmail.com</div>
+        <div class="contact-detail"><span>Phone:</span> +62 888-6310-837</div>
+        <div class="contact-detail"><span>Address:</span> Balikpapan,kalimantan Timur, Indonesia</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2024 Wijaksara Studio. All rights reserved.
+  </footer>
+
+  <script>
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const sections = document.querySelectorAll('.section');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        navLinks.forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+        const sectionId = this.getAttribute('data-section');
+        sections.forEach(sec => {
+          sec.classList.toggle('active', sec.id === sectionId);
+        });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+
+    const roleCards = document.querySelectorAll('.role-card');
+    roleCards.forEach(card => {
+      card.addEventListener('click', function () {
+        roleCards.forEach(c => c.classList.remove('selected'));
+        this.classList.add('selected');
+      });
+    });
+  </script>
+</body>
+</html>
