@@ -9,13 +9,13 @@
         @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
         
         :root {
-            --primary: #00f5ff;
-            --secondary: #ff0080;
-            --accent: #00ff88;
-            --dark: #0a0a0f;
-            --darker: #05050a;
-            --glass: rgba(255, 255, 255, 0.05);
-            --glow: 0 0 20px rgba(0, 245, 255, 0.3);
+            --primary: #FFD700;
+            --secondary: #FFA500;
+            --accent: #FFFF00;
+            --dark: #0a0a0a;
+            --darker: #000000;
+            --glass: rgba(255, 215, 0, 0.1);
+            --glow: 0 0 20px rgba(255, 215, 0, 0.3);
         }
 
         * {
@@ -166,7 +166,7 @@
         /* Hero Section */
         .hero {
             height: 100vh;
-            background: radial-gradient(circle at 50% 50%, rgba(0, 245, 255, 0.1) 0%, var(--dark) 50%);
+            background: radial-gradient(circle at 50% 50%, rgba(255, 215, 0, 0.1) 0%, var(--dark) 50%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -182,9 +182,9 @@
             right: 0;
             bottom: 0;
             background: 
-                linear-gradient(90deg, transparent, rgba(0, 245, 255, 0.03), transparent),
-                radial-gradient(circle at 20% 80%, rgba(255, 0, 128, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(0, 255, 136, 0.1) 0%, transparent 50%);
+                linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.03), transparent),
+                radial-gradient(circle at 20% 80%, rgba(255, 165, 0, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 215, 0, 0.1) 0%, transparent 50%);
             animation: pulse 8s ease-in-out infinite alternate;
         }
 
@@ -243,7 +243,7 @@
             font-weight: bold;
             font-size: 1.1rem;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 10px 30px rgba(0, 245, 255, 0.3);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
             margin: 0 15px 15px 0;
             position: relative;
             overflow: hidden;
@@ -266,7 +266,7 @@
 
         .cta-button:hover {
             transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 15px 40px rgba(0, 245, 255, 0.5);
+            box-shadow: 0 15px 40px rgba(255, 215, 0, 0.5);
         }
 
         .cta-button.secondary {
@@ -296,7 +296,7 @@
             font-weight: 900;
             text-align: center;
             margin-bottom: 40px;
-            background: linear-gradient(45deg, var(--primary), var(--accent));
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -332,7 +332,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(0, 245, 255, 0.1), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.1), transparent);
             transition: all 0.8s;
         }
 
@@ -342,7 +342,7 @@
 
         .glass-card:hover {
             transform: translateY(-15px) scale(1.02);
-            box-shadow: 0 25px 50px rgba(0, 245, 255, 0.2);
+            box-shadow: 0 25px 50px rgba(255, 215, 0, 0.2);
             border-color: var(--primary);
         }
 
@@ -396,11 +396,11 @@
 
         .service-features li:hover {
             opacity: 1;
-            color: var(--accent);
+            color: var(--primary);
         }
 
         .service-features i {
-            color: var(--accent);
+            color: var(--secondary);
             font-size: 1rem;
         }
 
@@ -430,7 +430,7 @@
         .tech-item:nth-child(4) .tech-icon { color: #FF2D20; } /* Laravel */
         .tech-item:nth-child(5) .tech-icon { color: #02569B; } /* Flutter */
         .tech-item:nth-child(6) .tech-icon { color: var(--primary); } /* Unity */
-        .tech-item:nth-child(7) .tech-icon { color: var(--accent); } /* Godot */
+        .tech-item:nth-child(7) .tech-icon { color: var(--secondary); } /* Godot */
         .tech-item:nth-child(8) .tech-icon { color: #06B6D4; } /* Tailwind */
 
         .tech-item:hover .tech-icon {
@@ -553,7 +553,7 @@
 
         .team-member:hover .member-avatar {
             transform: scale(1.1);
-            box-shadow: 0 0 30px rgba(0, 245, 255, 0.5);
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
         }
 
         .member-info h3 {
@@ -585,7 +585,7 @@
 
         .pricing-card.featured {
             transform: scale(1.05);
-            border-color: var(--accent);
+            border-color: var(--secondary);
         }
 
         .pricing-header {
@@ -620,7 +620,7 @@
         }
 
         .pricing-features i {
-            color: var(--accent);
+            color: var(--secondary);
         }
 
         /* Contact Form */
@@ -651,7 +651,7 @@
         .form-group textarea:focus {
             outline: none;
             border-color: var(--primary);
-            box-shadow: 0 0 20px rgba(0, 245, 255, 0.2);
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
         }
 
         .form-group label {
@@ -708,14 +708,14 @@
 
         .social-links a:hover {
             transform: scale(1.2) rotateY(360deg);
-            box-shadow: 0 0 30px rgba(0, 245, 255, 0.5);
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
             border-color: var(--primary);
         }
 
         /* Animations */
         @keyframes glow {
-            from { text-shadow: 0 0 20px rgba(0, 245, 255, 0.5); }
-            to { text-shadow: 0 0 40px rgba(0, 245, 255, 0.8), 0 0 60px rgba(255, 0, 128, 0.3); }
+            from { text-shadow: 0 0 20px rgba(255, 215, 0, 0.5); }
+            to { text-shadow: 0 0 40px rgba(255, 215, 0, 0.8), 0 0 60px rgba(255, 165, 0, 0.3); }
         }
 
         @keyframes pulse {
@@ -793,7 +793,8 @@
     <nav id="navbar">
         <div class="nav-container">
             <div class="logo">
-                <i class="fas fa-cube"></i>
+                <img src="logo.png" alt="Wijaksara Studio Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+                <i class="fas fa-cube" style="display: none;"></i>
                 WIJAKSARA STUDIO
             </div>
             <ul class="nav-links">
@@ -1015,51 +1016,27 @@
         
         <div class="team-grid">
             <div class="glass-card team-member">
-                <div class="member-avatar">AG</div>
+                <div class="member-avatar">PA</div>
                 <div class="member-info">
-                    <h3>Arya Gunawan</h3>
-                    <p class="member-role">Studio Director & Lead Game Developer</p>
-                    <p>Visionary leader with 8+ years in game development, specializing in Unity and Godot engines with published titles on multiple platforms.</p>
+                    <h3>Putra Abdul Azis</h3>
+                    <p class="member-role">Game & App Programming</p>
+                    <p><strong>@PxZenon</strong><br>Expert in Unity and mobile app development with expertise in creating engaging gaming experiences and robust applications.</p>
                 </div>
             </div>
             <div class="glass-card team-member">
-                <div class="member-avatar">SP</div>
+                <div class="member-avatar">RN</div>
                 <div class="member-info">
-                    <h3>Sari Pratiwi</h3>
-                    <p class="member-role">Senior Full-Stack Developer</p>
-                    <p>Laravel and Flutter expert with extensive experience in building scalable web applications and cross-platform mobile solutions.</p>
+                    <h3>Ramadhan Naiel</h3>
+                    <p class="member-role">2D/3D Artisan & Animator</p>
+                    <p><strong>@Draxx</strong><br>Master of digital art and animation, creating stunning visuals and bringing characters to life with exceptional artistic skills.</p>
                 </div>
             </div>
             <div class="glass-card team-member">
-                <div class="member-avatar">RH</div>
+                <div class="member-avatar">HF</div>
                 <div class="member-info">
-                    <h3>Rahmat Hidayat</h3>
-                    <p class="member-role">Lead 3D Artist & Animator</p>
-                    <p>Master of 3D modeling and animation with expertise in creating stunning characters and environments for games and films.</p>
-                </div>
-            </div>
-            <div class="glass-card team-member">
-                <div class="member-avatar">DM</div>
-                <div class="member-info">
-                    <h3>Dewi Maharani</h3>
-                    <p class="member-role">UI/UX Designer</p>
-                    <p>Creative designer focused on user experience and interface design, ensuring every product is both beautiful and intuitive.</p>
-                </div>
-            </div>
-            <div class="glass-card team-member">
-                <div class="member-avatar">BK</div>
-                <div class="member-info">
-                    <h3>Budi Kurniawan</h3>
-                    <p class="member-role">Mobile App Developer</p>
-                    <p>Flutter specialist with deep knowledge of mobile app architecture, performance optimization, and app store guidelines.</p>
-                </div>
-            </div>
-            <div class="glass-card team-member">
-                <div class="member-avatar">LN</div>
-                <div class="member-info">
-                    <h3>Luna Natasya</h3>
-                    <p class="member-role">2D Artist & Illustrator</p>
-                    <p>Talented digital artist creating captivating 2D artwork, character designs, and illustrations with unique artistic style.</p>
+                    <h3>Hulyo Fernandes Han</h3>
+                    <p class="member-role">Web Developer & UI Designer</p>
+                    <p>Specialist in Laravel web development and UI design, creating modern, responsive websites with exceptional user experiences.</p>
                 </div>
             </div>
         </div>
@@ -1323,8 +1300,8 @@
         // Dynamic background color change on scroll
         window.addEventListener('scroll', () => {
             const scrollPercent = window.pageYOffset / (document.documentElement.scrollHeight - window.innerHeight);
-            const hue = scrollPercent * 60; // Change hue based on scroll
-            document.documentElement.style.setProperty('--primary', `hsl(${180 + hue}, 100%, 50%)`);
+            const hue = 45 + (scrollPercent * 15); // Golden hue range
+            document.documentElement.style.setProperty('--primary', `hsl(${hue}, 100%, 50%)`);
         });
 
         // Text typing effect for hero
@@ -1350,7 +1327,7 @@
         formInputs.forEach(input => {
             input.addEventListener('focus', () => {
                 input.parentElement.style.transform = 'scale(1.02)';
-                input.style.boxShadow = '0 0 30px rgba(0, 245, 255, 0.3)';
+                input.style.boxShadow = '0 0 30px rgba(255, 215, 0, 0.3)';
             });
             
             input.addEventListener('blur', () => {
