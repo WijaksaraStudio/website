@@ -1,306 +1,1433 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wijaksara Studio Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --black: #181818;
-      --gold: #ffd700;
-      --gold-dark: #bfa100;
-      --white: #ffffff;
-      --gray: #222222;
-    }
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background: var(--black);
-      color: var(--white);
-      min-height: 100vh;
-      line-height: 1.6;
-    }
-    header {
-      background: var(--gray);
-      padding: 1.5rem 0;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    }
-    .container {
-      width: 90%;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .logo {
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--gold);
-      letter-spacing: 1px;
-    }
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-    }
-    .nav-links a {
-      color: var(--white);
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-    .nav-links a.active,
-    .nav-links a:hover {
-      color: var(--gold);
-    }
-    .section {
-      padding: 4rem 0;
-      display: none;
-      animation: fadeIn 0.6s ease-in-out;
-    }
-    .section.active {
-      display: block;
-    }
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wijaksara Studio - Premium Digital Solutions from Indonesia</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --primary: #00f5ff;
+            --secondary: #ff0080;
+            --accent: #00ff88;
+            --dark: #0a0a0f;
+            --darker: #05050a;
+            --glass: rgba(255, 255, 255, 0.05);
+            --glow: 0 0 20px rgba(0, 245, 255, 0.3);
+        }
 
-    /* Home */
-    .home-title {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: var(--gold);
-      margin-bottom: 1rem;
-    }
-    .home-desc {
-      font-size: 1.125rem;
-      max-width: 640px;
-      margin-bottom: 2rem;
-      color: #dddddd;
-    }
-    .product-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-    .product-card {
-      background: var(--gray);
-      border: 2px solid var(--gold-dark);
-      border-radius: 16px;
-      padding: 1.5rem;
-      flex: 1 1 260px;
-      max-width: 360px;
-      transition: 0.2s ease;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    }
-    .product-card:hover {
-      transform: translateY(-6px);
-      border-color: var(--gold);
-      box-shadow: 0 8px 24px rgba(255, 215, 0, 0.15);
-    }
-    .product-title {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: var(--gold);
-      margin-bottom: 0.5rem;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    /* Roles */
-    .roles-title {
-      text-align: center;
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--gold);
-      margin-bottom: 2rem;
-    }
-    .role-cards {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-    }
-    .role-card {
-      background: linear-gradient(135deg, var(--gray), var(--gold-dark));
-      border: 2px solid var(--gold);
-      border-radius: 18px;
-      padding: 2rem;
-      width: 280px;
-      cursor: pointer;
-      transition: 0.3s ease;
-      text-align: center;
-    }
-    .role-card:hover,
-    .role-card.selected {
-      transform: translateY(-5px) scale(1.03);
-      box-shadow: 0 6px 20px rgba(255, 215, 0, 0.15);
-    }
-    .role-icon {
-      font-size: 2.5rem;
-      color: var(--gold);
-      margin-bottom: 0.75rem;
-    }
-    .role-title {
-      font-size: 1.2rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
-    .role-desc {
-      font-size: 1rem;
-      color: #ddd;
-    }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--dark);
+            color: #ffffff;
+            overflow-x: hidden;
+            line-height: 1.6;
+            cursor: none;
+        }
 
-    /* Contact */
-    .contact-info {
-      background: var(--gray);
-      border-radius: 16px;
-      padding: 2rem;
-      max-width: 500px;
-      margin: 0 auto;
-      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.12);
-      border: 1.5px solid var(--gold-dark);
-      text-align: center;
-    }
-    .contact-title {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--gold);
-      margin-bottom: 1rem;
-    }
-    .contact-detail {
-      margin-bottom: 0.75rem;
-      font-size: 1.1rem;
-    }
-    .contact-detail span {
-      font-weight: 600;
-      color: var(--gold);
-    }
+        /* Custom Cursor */
+        .cursor {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--primary);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transition: all 0.1s ease;
+            mix-blend-mode: difference;
+        }
 
-    footer {
-      text-align: center;
-      padding: 1.5rem 0;
-      background: var(--gray);
-      font-size: 1rem;
-      color: var(--gold-dark);
-      margin-top: 3rem;
-    }
+        .cursor-dot {
+            position: fixed;
+            width: 4px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transition: all 0.05s ease;
+        }
 
-    /* Responsive */
-    @media (max-width: 768px) {
-      .product-list, .role-cards {
-        flex-direction: column;
-        align-items: center;
-      }
-      .product-card, .role-card {
-        width: 100%;
-        max-width: 400px;
-      }
-    }
-  </style>
+        /* Particle System */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: var(--primary);
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: float 20s linear infinite;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 15, 0.8);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            padding: 20px 0;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-bottom: 1px solid rgba(0, 245, 255, 0.1);
+        }
+
+        nav.scrolled {
+            background: rgba(5, 5, 10, 0.95);
+            box-shadow: var(--glow);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 30px;
+        }
+
+        .logo {
+            font-family: 'Orbitron', monospace;
+            font-size: 28px;
+            font-weight: 900;
+            color: var(--primary);
+            text-shadow: 0 0 20px rgba(0, 245, 255, 0.5);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo i {
+            font-size: 36px;
+            animation: spin 10s linear infinite;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 15px;
+            border-radius: 10px;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+            text-shadow: 0 0 10px rgba(0, 245, 255, 0.7);
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: radial-gradient(circle at 50% 50%, rgba(0, 245, 255, 0.1) 0%, var(--dark) 50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                linear-gradient(90deg, transparent, rgba(0, 245, 255, 0.03), transparent),
+                radial-gradient(circle at 20% 80%, rgba(255, 0, 128, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(0, 255, 136, 0.1) 0%, transparent 50%);
+            animation: pulse 8s ease-in-out infinite alternate;
+        }
+
+        .hero-content {
+            text-align: center;
+            z-index: 2;
+            max-width: 1000px;
+            padding: 0 30px;
+        }
+
+        .hero h1 {
+            font-family: 'Orbitron', monospace;
+            font-size: 5rem;
+            font-weight: 900;
+            margin-bottom: 30px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: glow 3s ease-in-out infinite alternate;
+            line-height: 1.1;
+        }
+
+        .hero .subtitle {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+            font-weight: 600;
+            opacity: 0;
+            animation: slideUp 1s ease-out 0.5s forwards;
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 40px;
+            opacity: 0;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+            animation: slideUp 1s ease-out 1s forwards;
+        }
+
+        .cta-buttons {
+            opacity: 0;
+            animation: slideUp 1s ease-out 1.5s forwards;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 18px 40px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            color: #000;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 10px 30px rgba(0, 245, 255, 0.3);
+            margin: 0 15px 15px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: all 0.5s;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(0, 245, 255, 0.5);
+        }
+
+        .cta-button.secondary {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .cta-button.secondary:hover {
+            background: var(--primary);
+            color: #000;
+        }
+
+        /* Sections */
+        .section {
+            padding: 150px 0;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding-left: 30px;
+            padding-right: 30px;
+            position: relative;
+        }
+
+        .section-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 3.5rem;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 40px;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.3rem;
+            opacity: 0.8;
+            margin-bottom: 80px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Glass Cards */
+        .glass-card {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 245, 255, 0.1), transparent);
+            transition: all 0.8s;
+        }
+
+        .glass-card:hover::before {
+            left: 100%;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 245, 255, 0.2);
+            border-color: var(--primary);
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 80px;
+        }
+
+        .service-card {
+            text-align: center;
+            position: relative;
+        }
+
+        .service-icon {
+            font-size: 4rem;
+            color: var(--primary);
+            margin-bottom: 30px;
+            display: block;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .service-card h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .service-card p {
+            line-height: 1.8;
+            opacity: 0.9;
+            margin-bottom: 25px;
+        }
+
+        .service-features {
+            list-style: none;
+            text-align: left;
+        }
+
+        .service-features li {
+            padding: 8px 0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            opacity: 0.8;
+            transition: all 0.3s ease;
+        }
+
+        .service-features li:hover {
+            opacity: 1;
+            color: var(--accent);
+        }
+
+        .service-features i {
+            color: var(--accent);
+            font-size: 1rem;
+        }
+
+        /* Tech Stack */
+        .tech-stack {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 80px;
+        }
+
+        .tech-item {
+            text-align: center;
+            position: relative;
+        }
+
+        .tech-icon {
+            font-size: 5rem;
+            margin-bottom: 20px;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .tech-item:nth-child(1) .tech-icon { color: #E44F26; } /* HTML5 */
+        .tech-item:nth-child(2) .tech-icon { color: #1572B6; } /* CSS3 */
+        .tech-item:nth-child(3) .tech-icon { color: #F7DF1E; } /* JavaScript */
+        .tech-item:nth-child(4) .tech-icon { color: #FF2D20; } /* Laravel */
+        .tech-item:nth-child(5) .tech-icon { color: #02569B; } /* Flutter */
+        .tech-item:nth-child(6) .tech-icon { color: var(--primary); } /* Unity */
+        .tech-item:nth-child(7) .tech-icon { color: var(--accent); } /* Godot */
+        .tech-item:nth-child(8) .tech-icon { color: #06B6D4; } /* Tailwind */
+
+        .tech-item:hover .tech-icon {
+            transform: scale(1.2) rotateY(360deg);
+            filter: drop-shadow(0 0 20px currentColor);
+        }
+
+        .tech-item h4 {
+            color: #ffffff;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        /* Portfolio Grid */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            margin-top: 80px;
+        }
+
+        .portfolio-item {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            height: 300px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+        }
+
+        .portfolio-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            transition: all 0.3s ease;
+            z-index: 2;
+        }
+
+        .portfolio-item:hover::before {
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .portfolio-content {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            right: 30px;
+            z-index: 3;
+            transform: translateY(20px);
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+
+        .portfolio-item:hover .portfolio-content {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .portfolio-content h3 {
+            color: #ffffff;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .portfolio-content p {
+            opacity: 0.9;
+        }
+
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 80px;
+        }
+
+        .team-member {
+            text-align: center;
+            position: relative;
+        }
+
+        .member-avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            margin: 0 auto 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #000;
+            font-weight: bold;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .member-avatar::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+            transform: rotate(45deg);
+            transition: all 0.5s ease;
+            opacity: 0;
+        }
+
+        .team-member:hover .member-avatar::before {
+            opacity: 1;
+            transform: rotate(45deg) translate(50%, 50%);
+        }
+
+        .team-member:hover .member-avatar {
+            transform: scale(1.1);
+            box-shadow: 0 0 30px rgba(0, 245, 255, 0.5);
+        }
+
+        .member-info h3 {
+            color: var(--primary);
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .member-role {
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        /* Pricing Cards */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 80px;
+        }
+
+        .pricing-card {
+            text-align: center;
+            position: relative;
+        }
+
+        .pricing-card.featured {
+            transform: scale(1.05);
+            border-color: var(--accent);
+        }
+
+        .pricing-header {
+            padding: 40px 30px 30px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .price {
+            font-family: 'Orbitron', monospace;
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .price-period {
+            opacity: 0.6;
+            font-size: 1rem;
+        }
+
+        .pricing-features {
+            padding: 30px;
+            list-style: none;
+        }
+
+        .pricing-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .pricing-features i {
+            color: var(--accent);
+        }
+
+        /* Contact Form */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 20px;
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            color: #ffffff;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 20px rgba(0, 245, 255, 0.2);
+        }
+
+        .form-group label {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: rgba(255, 255, 255, 0.6);
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus + label,
+        .form-group textarea:focus + label,
+        .form-group input:valid + label,
+        .form-group textarea:valid + label {
+            top: -10px;
+            left: 15px;
+            font-size: 0.9rem;
+            color: var(--primary);
+            background: var(--dark);
+            padding: 0 10px;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--darker), var(--dark));
+            padding: 100px 0 50px;
+            text-align: center;
+            border-top: 1px solid rgba(0, 245, 255, 0.2);
+            margin-top: 100px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .social-links a {
+            color: var(--primary);
+            font-size: 2rem;
+            transition: all 0.3s ease;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 245, 255, 0.2);
+        }
+
+        .social-links a:hover {
+            transform: scale(1.2) rotateY(360deg);
+            box-shadow: 0 0 30px rgba(0, 245, 255, 0.5);
+            border-color: var(--primary);
+        }
+
+        /* Animations */
+        @keyframes glow {
+            from { text-shadow: 0 0 20px rgba(0, 245, 255, 0.5); }
+            to { text-shadow: 0 0 40px rgba(0, 245, 255, 0.8), 0 0 60px rgba(255, 0, 128, 0.3); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            25% { transform: translateY(-20px) rotate(90deg); }
+            50% { transform: translateY(-40px) rotate(180deg); }
+            75% { transform: translateY(-20px) rotate(270deg); }
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes slideUp {
+            from { 
+                opacity: 0; 
+                transform: translateY(50px); 
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0); 
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .hero h1 { font-size: 4rem; }
+            .section-title { font-size: 3rem; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 3rem; }
+            .hero .subtitle { font-size: 1.5rem; }
+            .hero p { font-size: 1.2rem; }
+            .section-title { font-size: 2.5rem; }
+            .section { padding: 100px 0; }
+            .services-grid,
+            .portfolio-grid,
+            .team-grid,
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            .tech-stack {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 2.5rem; }
+            .section-title { font-size: 2rem; }
+            .nav-container,
+            .section {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <nav>
-        <div class="logo">Wijaksara Studio</div>
-        <div class="nav-links">
-          <a href="#" class="active" data-section="home">Home</a>
-          <a href="#" data-section="roles">Roles</a>
-          <a href="#" data-section="contact">Contact</a>
-        </div>
-      </nav>
-    </div>
-  </header>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-dot"></div>
 
-  <main class="container">
-    <section id="home" class="section active">
-      <div class="home-title">Welcome to Wijaksara Studio</div>
-      <div class="home-desc">
-        Wijaksara Studio is a modern creative studio that combines technology and creativity to build tailored digital solutions. We specialize in developing custom applications, websites, games, and office data tools to meet your specific needs.
-      </div>
-      <div class="product-list">
-        <div class="product-card">
-          <div class="product-title">Applications & Websites</div>
-          <div>We build responsive, modern, and secure web and mobile apps for businesses and individuals.</div>
+    <!-- Particle System -->
+    <div class="particles"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-cube"></i>
+                WIJAKSARA STUDIO
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="#services"><i class="fas fa-cogs"></i> Services</a></li>
+                <li><a href="#tech"><i class="fas fa-microchip"></i> Technology</a></li>
+                <li><a href="#portfolio"><i class="fas fa-briefcase"></i> Portfolio</a></li>
+                <li><a href="#team"><i class="fas fa-users"></i> Team</a></li>
+                <li><a href="#pricing"><i class="fas fa-tags"></i> Pricing</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
         </div>
-        <div class="product-card">
-          <div class="product-title">Office Documents</div>
-          <div>Professional creation of Office documents, including Word, Excel, and PowerPoint presentations.</div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>WIJAKSARA STUDIO</h1>
+            <p class="subtitle">Premium Digital Solutions from Indonesia</p>
+            <p>We craft extraordinary digital experiences through cutting-edge game development, stunning 2D/3D art, immersive animations, modern web applications, and powerful mobile apps - all at unbeatable prices.</p>
+            <div class="cta-buttons">
+                <a href="#portfolio" class="cta-button"><i class="fas fa-rocket"></i> Explore Our Work</a>
+                <a href="#contact" class="cta-button secondary"><i class="fas fa-handshake"></i> Start Your Project</a>
+            </div>
         </div>
-        <div class="product-card">
-          <div class="product-title">Game Development</div>
-          <div>Design and develop custom games or provide game assets for your project.</div>
-        </div>
-      </div>
     </section>
 
-    <section id="roles" class="section">
-      <div class="roles-title">Choose Your Role</div>
-      <div class="role-cards">
-        <div class="role-card" data-role="warrior">
-          <div class="role-icon">🗡️</div>
-          <div class="role-title">Warrior (Developer)</div>
-          <div class="role-desc">A digital fighter who builds tech solutions and systems with the power of code.</div>
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2 class="section-title">About Our Studio</h2>
+        <p class="section-subtitle">A powerhouse of creative and technical excellence, delivering world-class digital solutions from the heart of Indonesia</p>
+        
+        <div class="services-grid">
+            <div class="glass-card">
+                <div class="service-card">
+                    <i class="fas fa-palette service-icon"></i>
+                    <h3>2D/3D Art & Design</h3>
+                    <p>Creating breathtaking visual experiences with cutting-edge digital artistry and innovative design approaches.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Character Design & Modeling</li>
+                        <li><i class="fas fa-check"></i> Environment & Prop Art</li>
+                        <li><i class="fas fa-check"></i> UI/UX Design</li>
+                        <li><i class="fas fa-check"></i> Concept Art Development</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="glass-card">
+                <div class="service-card">
+                    <i class="fas fa-play service-icon"></i>
+                    <h3>Animation & VFX</h3>
+                    <p>Bringing stories to life with fluid animations and spectacular visual effects that captivate audiences.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> 2D/3D Character Animation</li>
+                        <li><i class="fas fa-check"></i> Motion Graphics</li>
+                        <li><i class="fas fa-check"></i> Visual Effects</li>
+                        <li><i class="fas fa-check"></i> Cinematic Sequences</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="glass-card">
+                <div class="service-card">
+                    <i class="fas fa-gamepad service-icon"></i>
+                    <h3>Game Development</h3>
+                    <p>Building immersive gaming experiences with Unity and Godot, from concept to publishing.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> 2D/3D Game Development</li>
+                        <li><i class="fas fa-check"></i> Unity & Godot Expertise</li>
+                        <li><i class="fas fa-check"></i> Multi-platform Publishing</li>
+                        <li><i class="fas fa-check"></i> Gameplay Programming</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="glass-card">
+                <div class="service-card">
+                    <i class="fas fa-code service-icon"></i>
+                    <h3>Web Development</h3>
+                    <p>Modern, responsive web applications built with Laravel and Tailwind CSS for exceptional performance.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Laravel Backend Development</li>
+                        <li><i class="fas fa-check"></i> Tailwind CSS Styling</li>
+                        <li><i class="fas fa-check"></i> Progressive Web Apps</li>
+                        <li><i class="fas fa-check"></i> E-commerce Solutions</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="glass-card">
+                <div class="service-card">
+                    <i class="fas fa-mobile-alt service-icon"></i>
+                    <h3>Mobile App Development</h3>
+                    <p>Cross-platform mobile applications using Flutter for seamless iOS and Android experiences.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Flutter Development</li>
+                        <li><i class="fas fa-check"></i> Cross-platform Solutions</li>
+                        <li><i class="fas fa-check"></i> Native Performance</li>
+                        <li><i class="fas fa-check"></i> App Store Publishing</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="glass-card">
+                <div class="service-card">
+                    <i class="fas fa-dollar-sign service-icon"></i>
+                    <h3>Affordable Excellence</h3>
+                    <p>Premium quality solutions at unbeatable prices, making professional digital services accessible to all.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Competitive Pricing</li>
+                        <li><i class="fas fa-check"></i> No Hidden Costs</li>
+                        <li><i class="fas fa-check"></i> Flexible Payment Plans</li>
+                        <li><i class="fas fa-check"></i> Maximum Value</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="role-card" data-role="wizard">
-          <div class="role-icon">🪄</div>
-          <div class="role-title">Wizard (Artisan)</div>
-          <div class="role-desc">A creative wizard crafting stunning artworks, designs, and handmade products.</div>
-        </div>
-      </div>
     </section>
 
+    <!-- Technology Stack -->
+    <section id="tech" class="section">
+        <h2 class="section-title">Our Technology Stack</h2>
+        <p class="section-subtitle">Powered by cutting-edge tools and frameworks to deliver exceptional results</p>
+        
+        <div class="tech-stack">
+            <div class="tech-item">
+                <i class="fab fa-html5 tech-icon"></i>
+                <h4>HTML5</h4>
+                <p>Modern web standards</p>
+            </div>
+            <div class="tech-item">
+                <i class="fab fa-css3-alt tech-icon"></i>
+                <h4>CSS3</h4>
+                <p>Advanced styling</p>
+            </div>
+            <div class="tech-item">
+                <i class="fab fa-js-square tech-icon"></i>
+                <h4>JavaScript</h4>
+                <p>Dynamic interactions</p>
+            </div>
+            <div class="tech-item">
+                <i class="fab fa-laravel tech-icon"></i>
+                <h4>Laravel</h4>
+                <p>PHP framework</p>
+            </div>
+            <div class="tech-item">
+                <i class="fas fa-mobile-alt tech-icon"></i>
+                <h4>Flutter</h4>
+                <p>Cross-platform apps</p>
+            </div>
+            <div class="tech-item">
+                <i class="fas fa-cube tech-icon"></i>
+                <h4>Unity</h4>
+                <p>Game development</p>
+            </div>
+            <div class="tech-item">
+                <i class="fas fa-gamepad tech-icon"></i>
+                <h4>Godot</h4>
+                <p>Open source engine</p>
+            </div>
+            <div class="tech-item">
+                <i class="fas fa-wind tech-icon"></i>
+                <h4>Tailwind CSS</h4>
+                <p>Utility-first CSS</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section">
+        <h2 class="section-title">Our Portfolio</h2>
+        <p class="section-subtitle">Showcasing our expertise across diverse digital domains</p>
+        
+        <div class="portfolio-grid">
+            <div class="glass-card portfolio-item">
+                <div class="portfolio-content">
+                    <h3>Epic Adventure RPG</h3>
+                    <p>A stunning 3D RPG with immersive gameplay, developed using Unity with custom shaders and dynamic weather systems.</p>
+                </div>
+            </div>
+            <div class="glass-card portfolio-item">
+                <div class="portfolio-content">
+                    <h3>E-commerce Platform</h3>
+                    <p>Modern Laravel-based e-commerce solution with Tailwind CSS, featuring advanced inventory management and payment integration.</p>
+                </div>
+            </div>
+            <div class="glass-card portfolio-item">
+                <div class="portfolio-content">
+                    <h3>Mobile Fitness App</h3>
+                    <p>Cross-platform Flutter application with real-time workout tracking, social features, and seamless cloud synchronization.</p>
+                </div>
+            </div>
+            <div class="glass-card portfolio-item">
+                <div class="portfolio-content">
+                    <h3>2D Platformer Game</h3>
+                    <p>Pixel-perfect 2D platformer built with Godot, featuring fluid animations, particle effects, and original soundtrack.</p>
+                </div>
+            </div>
+            <div class="glass-card portfolio-item">
+                <div class="portfolio-content">
+                    <h3>Corporate Website</h3>
+                    <p>Professional corporate presence with modern design, built using Laravel and optimized for performance and SEO.</p>
+                </div>
+            </div>
+            <div class="glass-card portfolio-item">
+                <div class="portfolio-content">
+                    <h3>AR Mobile Experience</h3>
+                    <p>Innovative augmented reality app using Flutter and Unity integration, delivering immersive brand experiences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="section">
+        <h2 class="section-title">Meet Our Team</h2>
+        <p class="section-subtitle">Talented professionals dedicated to bringing your vision to life</p>
+        
+        <div class="team-grid">
+            <div class="glass-card team-member">
+                <div class="member-avatar">AG</div>
+                <div class="member-info">
+                    <h3>Arya Gunawan</h3>
+                    <p class="member-role">Studio Director & Lead Game Developer</p>
+                    <p>Visionary leader with 8+ years in game development, specializing in Unity and Godot engines with published titles on multiple platforms.</p>
+                </div>
+            </div>
+            <div class="glass-card team-member">
+                <div class="member-avatar">SP</div>
+                <div class="member-info">
+                    <h3>Sari Pratiwi</h3>
+                    <p class="member-role">Senior Full-Stack Developer</p>
+                    <p>Laravel and Flutter expert with extensive experience in building scalable web applications and cross-platform mobile solutions.</p>
+                </div>
+            </div>
+            <div class="glass-card team-member">
+                <div class="member-avatar">RH</div>
+                <div class="member-info">
+                    <h3>Rahmat Hidayat</h3>
+                    <p class="member-role">Lead 3D Artist & Animator</p>
+                    <p>Master of 3D modeling and animation with expertise in creating stunning characters and environments for games and films.</p>
+                </div>
+            </div>
+            <div class="glass-card team-member">
+                <div class="member-avatar">DM</div>
+                <div class="member-info">
+                    <h3>Dewi Maharani</h3>
+                    <p class="member-role">UI/UX Designer</p>
+                    <p>Creative designer focused on user experience and interface design, ensuring every product is both beautiful and intuitive.</p>
+                </div>
+            </div>
+            <div class="glass-card team-member">
+                <div class="member-avatar">BK</div>
+                <div class="member-info">
+                    <h3>Budi Kurniawan</h3>
+                    <p class="member-role">Mobile App Developer</p>
+                    <p>Flutter specialist with deep knowledge of mobile app architecture, performance optimization, and app store guidelines.</p>
+                </div>
+            </div>
+            <div class="glass-card team-member">
+                <div class="member-avatar">LN</div>
+                <div class="member-info">
+                    <h3>Luna Natasya</h3>
+                    <p class="member-role">2D Artist & Illustrator</p>
+                    <p>Talented digital artist creating captivating 2D artwork, character designs, and illustrations with unique artistic style.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="section">
+        <h2 class="section-title">Transparent Pricing</h2>
+        <p class="section-subtitle">Professional services at unbeatable prices - no hidden costs, just exceptional value</p>
+        
+        <div class="pricing-grid">
+            <div class="glass-card pricing-card">
+                <div class="pricing-header">
+                    <h3>Starter Package</h3>
+                    <div class="price">$299</div>
+                    <div class="price-period">per project</div>
+                </div>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check"></i> Simple 2D Game Development</li>
+                    <li><i class="fas fa-check"></i> Basic Web Development</li>
+                    <li><i class="fas fa-check"></i> Mobile App Prototype</li>
+                    <li><i class="fas fa-check"></i> 2D Art & Design</li>
+                    <li><i class="fas fa-check"></i> Basic Animation</li>
+                    <li><i class="fas fa-check"></i> 30 Days Support</li>
+                </ul>
+                <div style="padding: 30px;">
+                    <a href="#contact" class="cta-button secondary">Get Started</a>
+                </div>
+            </div>
+            
+            <div class="glass-card pricing-card featured">
+                <div class="pricing-header">
+                    <h3>Professional Package</h3>
+                    <div class="price">$799</div>
+                    <div class="price-period">per project</div>
+                </div>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check"></i> Advanced 2D/3D Game</li>
+                    <li><i class="fas fa-check"></i> Full-Stack Web Application</li>
+                    <li><i class="fas fa-check"></i> Complete Mobile App</li>
+                    <li><i class="fas fa-check"></i> 3D Modeling & Animation</li>
+                    <li><i class="fas fa-check"></i> UI/UX Design</li>
+                    <li><i class="fas fa-check"></i> 90 Days Support</li>
+                    <li><i class="fas fa-check"></i> Source Code Included</li>
+                </ul>
+                <div style="padding: 30px;">
+                    <a href="#contact" class="cta-button">Most Popular</a>
+                </div>
+            </div>
+            
+            <div class="glass-card pricing-card">
+                <div class="pricing-header">
+                    <h3>Enterprise Package</h3>
+                    <div class="price">$1999</div>
+                    <div class="price-period">per project</div>
+                </div>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check"></i> Complex 3D Game Development</li>
+                    <li><i class="fas fa-check"></i> Enterprise Web Solutions</li>
+                    <li><i class="fas fa-check"></i> Multi-platform Mobile Apps</li>
+                    <li><i class="fas fa-check"></i> Advanced 3D Art & VFX</li>
+                    <li><i class="fas fa-check"></i> Custom Animations</li>
+                    <li><i class="fas fa-check"></i> 6 Months Support</li>
+                    <li><i class="fas fa-check"></i> Unlimited Revisions</li>
+                    <li><i class="fas fa-check"></i> Priority Development</li>
+                </ul>
+                <div style="padding: 30px;">
+                    <a href="#contact" class="cta-button secondary">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
     <section id="contact" class="section">
-      <div class="contact-info">
-        <div class="contact-title">Contact Information</div>
-        <div class="contact-detail"><span>Email:</span> wijaksara.studio@gmail.com</div>
-        <div class="contact-detail"><span>Phone:</span> +62 888-6310-837</div>
-        <div class="contact-detail"><span>Address:</span> Balikpapan,East Kalimantan, Indonesia</div>
-      </div>
+        <h2 class="section-title">Let's Create Together</h2>
+        <p class="section-subtitle">Ready to transform your ideas into extraordinary digital experiences?</p>
+        
+        <div class="glass-card contact-form">
+            <form>
+                <div class="form-group">
+                    <input type="text" id="name" required>
+                    <label for="name">Your Name</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" required>
+                    <label for="email">Email Address</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="project" required>
+                    <label for="project">Project Type</label>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" rows="5" required></textarea>
+                    <label for="message">Project Details</label>
+                </div>
+                <div style="text-align: center;">
+                    <button type="submit" class="cta-button">
+                        <i class="fas fa-rocket"></i> Launch Project
+                    </button>
+                </div>
+            </form>
+        </div>
+        
+        <div style="text-align: center; margin-top: 60px;">
+            <h3 style="color: var(--primary); margin-bottom: 20px; font-size: 1.5rem;">Studio Location</h3>
+            <p style="font-size: 1.2rem; margin-bottom: 10px;"><strong>Wijaksara Studio</strong></p>
+            <p style="opacity: 0.8;"><i class="fas fa-map-marker-alt"></i> Indonesia</p>
+            <p style="opacity: 0.8; margin-top: 15px;">Delivering world-class digital solutions globally from Indonesia</p>
+        </div>
     </section>
-  </main>
 
-  <footer>
-    &copy; 2024 Wijaksara Studio. All rights reserved.
-  </footer>
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" title="Discord"><i class="fab fa-discord"></i></a>
+            <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        
+        <div class="footer-info">
+            <p style="font-size: 1.1rem; margin-bottom: 15px;">&copy; 2024 Wijaksara Studio. All rights reserved.</p>
+            <p style="opacity: 0.7; margin-bottom: 10px;">Crafting exceptional digital experiences since 2023</p>
+            <p style="opacity: 0.6; font-size: 0.9rem;">Made with <i class="fas fa-heart" style="color: var(--secondary);"></i> and cutting-edge technology in Indonesia</p>
+        </div>
+    </footer>
 
-  <script>
-    const navLinks = document.querySelectorAll('.nav-links a');
-    const sections = document.querySelectorAll('.section');
-    navLinks.forEach(link => {
-      link.addEventListener('click', function (e) {
-        e.preventDefault();
-        navLinks.forEach(l => l.classList.remove('active'));
-        this.classList.add('active');
-        const sectionId = this.getAttribute('data-section');
-        sections.forEach(sec => {
-          sec.classList.toggle('active', sec.id === sectionId);
+    <script>
+        // Custom Cursor
+        const cursor = document.querySelector('.cursor');
+        const cursorDot = document.querySelector('.cursor-dot');
+        let mouseX = 0, mouseY = 0;
+        let cursorX = 0, cursorY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            cursorDot.style.left = mouseX + 'px';
+            cursorDot.style.top = mouseY + 'px';
         });
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-    });
 
-    const roleCards = document.querySelectorAll('.role-card');
-    roleCards.forEach(card => {
-      card.addEventListener('click', function () {
-        roleCards.forEach(c => c.classList.remove('selected'));
-        this.classList.add('selected');
-      });
-    });
-  </script>
+        function animateCursor() {
+            const speed = 0.1;
+            cursorX += (mouseX - cursorX) * speed;
+            cursorY += (mouseY - cursorY) * speed;
+            cursor.style.left = cursorX + 'px';
+            cursor.style.top = cursorY + 'px';
+            requestAnimationFrame(animateCursor);
+        }
+        animateCursor();
+
+        // Cursor hover effects
+        const hoverElements = document.querySelectorAll('a, button, .glass-card, .tech-item');
+        hoverElements.forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursor.style.transform = 'scale(1.5)';
+                cursor.style.borderColor = 'var(--secondary)';
+            });
+            el.addEventListener('mouseleave', () => {
+                cursor.style.transform = 'scale(1)';
+                cursor.style.borderColor = 'var(--primary)';
+            });
+        });
+
+        // Particle System
+        const particlesContainer = document.querySelector('.particles');
+        const particleCount = 50;
+
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDuration = (Math.random() * 20 + 10) + 's';
+            particle.style.animationDelay = Math.random() * 20 + 's';
+            particlesContainer.appendChild(particle);
+
+            setTimeout(() => {
+                particle.remove();
+            }, 30000);
+        }
+
+        for (let i = 0; i < particleCount; i++) {
+            setTimeout(createParticle, i * 200);
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.glass-card, .tech-item, .section-title, .section-subtitle').forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(50px)';
+            element.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+            observer.observe(element);
+        });
+
+        // Staggered animations
+        document.querySelectorAll('.services-grid .glass-card').forEach((card, index) => {
+            card.style.transitionDelay = (index * 0.2) + 's';
+        });
+
+        document.querySelectorAll('.tech-item').forEach((item, index) => {
+            item.style.transitionDelay = (index * 0.1) + 's';
+        });
+
+        document.querySelectorAll('.portfolio-grid .glass-card').forEach((card, index) => {
+            card.style.transitionDelay = (index * 0.15) + 's';
+        });
+
+        // Parallax effect
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const rate = scrolled * -0.3;
+            
+            const hero = document.querySelector('.hero');
+            if (hero) {
+                hero.style.transform = `translateY(${rate}px)`;
+            }
+        });
+
+        // Dynamic background color change on scroll
+        window.addEventListener('scroll', () => {
+            const scrollPercent = window.pageYOffset / (document.documentElement.scrollHeight - window.innerHeight);
+            const hue = scrollPercent * 60; // Change hue based on scroll
+            document.documentElement.style.setProperty('--primary', `hsl(${180 + hue}, 100%, 50%)`);
+        });
+
+        // Text typing effect for hero
+        const heroTitle = document.querySelector('.hero h1');
+        const originalText = heroTitle.textContent;
+        heroTitle.textContent = '';
+
+        let i = 0;
+        const typeWriter = () => {
+            if (i < originalText.length) {
+                heroTitle.textContent += originalText.charAt(i);
+                i++;
+                setTimeout(typeWriter, 150);
+            }
+        };
+
+        window.addEventListener('load', () => {
+            setTimeout(typeWriter, 1000);
+        });
+
+        // Enhanced form interactions
+        const formInputs = document.querySelectorAll('input, textarea');
+        formInputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentElement.style.transform = 'scale(1.02)';
+                input.style.boxShadow = '0 0 30px rgba(0, 245, 255, 0.3)';
+            });
+            
+            input.addEventListener('blur', () => {
+                input.parentElement.style.transform = 'scale(1)';
+                input.style.boxShadow = 'none';
+            });
+        });
+
+        // 3D tilt effect for cards
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const rotateX = (y - centerY) / 10;
+                const rotateY = (centerX - x) / 10;
+                
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(0)`;
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateZ(0)';
+            });
+        });
+
+        // Floating animation for service icons
+        document.querySelectorAll('.service-icon').forEach((icon, index) => {
+            icon.style.animationDelay = (index * 0.5) + 's';
+            icon.style.animationDuration = (4 + index) + 's';
+        });
+
+        // Loading screen effect
+        window.addEventListener('load', () => {
+            document.body.style.opacity = '0';
+            setTimeout(() => {
+                document.body.style.transition = 'opacity 1s ease';
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+
+        // Enhanced scroll-based animations
+        const scrollElements = document.querySelectorAll('.tech-icon');
+        const elementInView = (el, dividend = 1) => {
+            const elementTop = el.getBoundingClientRect().top;
+            return (
+                elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend
+            );
+        };
+
+        const displayScrollElement = (element) => {
+            element.classList.add('scrolled-in');
+        };
+
+        const handleScrollAnimation = () => {
+            scrollElements.forEach((el) => {
+                if (elementInView(el, 1.25)) {
+                    displayScrollElement(el);
+                }
+            });
+        };
+
+        window.addEventListener('scroll', handleScrollAnimation);
+
+        // Add glitch effect to title on hover
+        const title = document.querySelector('.hero h1');
+        title.addEventListener('mouseenter', () => {
+            title.style.animation = 'none';
+            title.style.textShadow = '0 0 20px var(--primary), 0 0 40px var(--secondary), 0 0 60px var(--accent)';
+        });
+
+        title.addEventListener('mouseleave', () => {
+            title.style.animation = 'glow 3s ease-in-out infinite alternate';
+        });
+    </script>
 </body>
 </html>
