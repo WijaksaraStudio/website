@@ -1,275 +1,622 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: https://ogp.me/ns#">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
-    <!-- SEO Meta Tags -->
-    <title>Wijaksara Studio - Premium Digital Solutions from Indonesia | Game Development, Web Development, Mobile App</title>
-    <meta name="description" content="Wijaksara Studio is an indie studio from Indonesia providing game development, 2D pixel art, 3D modeling & animation, mobile app, and web app development services. Let Dreams Come True!">
-    <meta name="keywords" content="game development indonesia, unity developer, godot developer, blender 3d artist, aseprite pixel art, flutter app developer, laravel web developer, indie game studio indonesia, 2d 3d animation">
+    <!-- Primary SEO Meta Tags -->
+    <title>Wijaksara Studio | Premium Indie Game & Digital Development Studio from Indonesia</title>
+    <meta name="title" content="Wijaksara Studio | Premium Indie Game & Digital Development Studio from Indonesia">
+    <meta name="description" content="Wijaksara Studio - Indonesia's premier indie game development studio specializing in Unity, Godot, 2D/3D art, Blender animation, Flutter mobile apps, and Laravel web development. Est. 2023. Let Dreams Come True!">
+    <meta name="keywords" content="wijaksara studio, indie game studio indonesia, unity developer indonesia, godot game development, blender 3d artist, aseprite pixel art, flutter app developer, laravel web development, game development indonesia, 2d 3d animation studio, mobile app development indonesia, indonesian game developer, indie game studio, premium digital solutions">
     <meta name="author" content="Wijaksara Studio">
-    <meta name="robots" content="index, follow">
+    <meta name="publisher" content="Wijaksara Studio">
+    <meta name="copyright" content="Wijaksara Studio">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    <meta name="distribution" content="global">
+    <meta name="rating" content="general">
+    
+    <!-- Geo Location -->
+    <meta name="geo.region" content="ID">
+    <meta name="geo.country" content="Indonesia">
+    <meta name="geo.placename" content="Indonesia">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Wijaksara Studio">
     <meta property="og:url" content="https://wijaksara.netlify.app/">
-    <meta property="og:title" content="Wijaksara Studio - Premium Digital Solutions from Indonesia">
-    <meta property="og:description" content="We create games, mobile apps, websites, and digital animations. Let Dreams Come True!">
+    <meta property="og:title" content="Wijaksara Studio | Premium Indie Game & Digital Development Studio from Indonesia">
+    <meta property="og:description" content="Indonesia's premier indie game development studio. Unity, Godot, 2D/3D art, mobile apps, web development. Let Dreams Come True!">
     <meta property="og:image" content="https://wijaksara.netlify.app/preview.png">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://wijaksara.netlify.app/">
-    <meta property="twitter:title" content="Wijaksara Studio - Premium Digital Solutions from Indonesia">
-    <meta property="twitter:description" content="Game dev, pixel art, 3D modeling, mobile & web app development.">
-    <meta property="twitter:image" content="https://wijaksara.netlify.app/preview.png">
-
-    <!-- Favicons -->
+    <meta property="og:image:alt" content="Wijaksara Studio - Premium Digital Solutions">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@wijaksara_studio">
+    <meta name="twitter:creator" content="@wijaksara_studio">
+    <meta name="twitter:url" content="https://wijaksara.netlify.app/">
+    <meta name="twitter:title" content="Wijaksara Studio | Premium Indie Game & Digital Development Studio">
+    <meta name="twitter:description" content="Indonesia's premier indie game development studio specializing in Unity, Godot, 2D/3D art & animation.">
+    <meta name="twitter:image" content="https://wijaksara.netlify.app/preview.png">
+    <meta name="twitter:image:alt" content="Wijaksara Studio Logo">
+    
+    <!-- Favicons & App Icons -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="shortcut icon" href="logofavicon.png" type="image/png">
-    <link rel="apple-touch-icon" href="logofavicon.png">
-
-    <!-- Schema.org markup -->
+    <link rel="apple-touch-icon" sizes="180x180" href="logofavicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="logofavicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="logofavicon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#FFD700">
+    <meta name="msapplication-TileColor" content="#000000">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://wijaksara.netlify.app/">
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Wijaksara Studio",
+      "alternateName": "Wijaksara",
       "url": "https://wijaksara.netlify.app/",
-      "logo": "https://wijaksara.netlify.app/logo.png",
-      "description": "Premium Digital Solutions from Indonesia - Game Development, Web Development, Mobile App Development",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wijaksara.netlify.app/logo.png",
+        "width": "512",
+        "height": "512"
+      },
+      "description": "Premium indie game development studio from Indonesia specializing in Unity, Godot, 2D/3D art, mobile apps, and web development.",
+      "slogan": "Let Dreams Come True",
       "foundingDate": "2023",
+      "operatingStatus": "Active",
       "address": {
         "@type": "PostalAddress",
-        "addressCountry": "Indonesia"
+        "addressCountry": "ID",
+        "addressRegion": "Indonesia"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "availableLanguage": ["English", "Indonesian"]
       },
       "sameAs": [
         "https://www.instagram.com/wijaksara.studio",
         "https://www.tiktok.com/@wijaksara.studio",
         "https://www.youtube.com/@WIJAKSARASTUDIO"
-      ]
+      ],
+      "serviceType": [
+        "Game Development",
+        "Mobile App Development", 
+        "Web Development",
+        "2D Art & Animation",
+        "3D Modeling & Animation"
+      ],
+      "areaServed": "Worldwide",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Digital Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Game Development",
+              "description": "Unity and Godot game development services"
+            }
+          },
+          {
+            "@type": "Offer", 
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Mobile App Development",
+              "description": "Flutter cross-platform mobile applications"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service", 
+              "name": "Web Development",
+              "description": "Laravel web application development"
+            }
+          }
+        ]
+      }
     }
     </script>
 
     <style>
-        * {
+        /* CSS Custom Properties (Variables) */
+        :root {
+            --primary-gold: #FFD700;
+            --secondary-gold: #FFC107;
+            --dark-gold: #B8860B;
+            --accent-gold: #FFED4A;
+            
+            --primary-black: #000000;
+            --secondary-black: #0D0D0D;
+            --dark-gray: #1A1A1A;
+            --medium-gray: #2D2D2D;
+            --light-gray: #F8F9FA;
+            --border-gray: #333333;
+            
+            --white: #FFFFFF;
+            --off-white: #FAFAFA;
+            
+            --gradient-gold: linear-gradient(135deg, #FFD700 0%, #FFC107 50%, #B8860B 100%);
+            --gradient-dark: linear-gradient(135deg, #000000 0%, #1A1A1A 50%, #2D2D2D 100%);
+            --gradient-overlay: linear-gradient(rgba(0,0,0,0.8), rgba(26,26,26,0.9));
+            
+            --shadow-gold: 0 4px 20px rgba(255, 215, 0, 0.3);
+            --shadow-dark: 0 8px 32px rgba(0, 0, 0, 0.4);
+            --shadow-elevation: 0 12px 48px rgba(0, 0, 0, 0.2);
+            
+            --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-display: 'Playfair Display', Georgia, serif;
+            
+            --transition-fast: 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
+            --transition-normal: 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+            --transition-slow: 0.5s cubic-bezier(0.4, 0.0, 0.2, 1);
+            
+            --border-radius-sm: 8px;
+            --border-radius-md: 12px;
+            --border-radius-lg: 16px;
+            --border-radius-xl: 24px;
+        }
+
+        /* Reset and Base Styles */
+        *, *::before, *::after {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        :root {
-            --gold: #FFD700;
-            --dark-gold: #B8860B;
-            --black: #000000;
-            --dark-gray: #1a1a1a;
-            --light-gray: #f5f5f5;
-            --white: #ffffff;
-            --shadow-gold: rgba(255, 215, 0, 0.3);
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+            font-family: var(--font-primary);
+            line-height: 1.7;
             color: var(--white);
-            background: linear-gradient(135deg, var(--black) 0%, var(--dark-gray) 100%);
+            background: var(--gradient-dark);
             min-height: 100vh;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
+        /* Utility Classes */
         .container {
-            max-width: 1200px;
+            max-width: min(1400px, 95vw);
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 clamp(1rem, 4vw, 2rem);
         }
 
-        /* Header */
-        header {
-            background: rgba(0, 0, 0, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 1rem 0;
+        .section-padding {
+            padding: clamp(3rem, 8vw, 6rem) 0;
+        }
+
+        .text-center { text-align: center; }
+        .text-left { text-align: left; }
+        .text-right { text-align: right; }
+
+        .visually-hidden {
+            position: absolute !important;
+            width: 1px !important;
+            height: 1px !important;
+            padding: 0 !important;
+            margin: -1px !important;
+            overflow: hidden !important;
+            clip: rect(0, 0, 0, 0) !important;
+            white-space: nowrap !important;
+            border: 0 !important;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+        }
+
+        h3 {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            font-weight: 700;
+        }
+
+        h4 {
+            font-size: clamp(1.25rem, 3vw, 2rem);
+            font-weight: 600;
+        }
+
+        p {
+            font-size: clamp(1rem, 2.5vw, 1.125rem);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .lead {
+            font-size: clamp(1.125rem, 3vw, 1.375rem);
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        /* Header & Navigation */
+        .header {
             position: fixed;
-            width: 100%;
             top: 0;
+            left: 0;
+            right: 0;
             z-index: 1000;
-            border-bottom: 2px solid var(--gold);
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+            transition: all var(--transition-normal);
         }
 
-        nav {
+        .header.scrolled {
+            background: rgba(0, 0, 0, 0.98);
+            box-shadow: var(--shadow-dark);
+        }
+
+        .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: var(--gold);
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            color: var(--white);
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
+            padding: 1rem 0;
             position: relative;
         }
 
-        .nav-links a:hover {
-            color: var(--gold);
+        .logo {
+            font-family: var(--font-display);
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            font-weight: 900;
+            color: var(--primary-gold);
+            text-decoration: none;
+            position: relative;
+            z-index: 10;
+            transition: all var(--transition-normal);
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+            filter: brightness(1.2);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-link {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            padding: 0.75rem 1.25rem;
+            border-radius: var(--border-radius-lg);
+            position: relative;
+            transition: all var(--transition-normal);
+            text-transform: uppercase;
+        }
+
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--gradient-gold);
+            border-radius: inherit;
+            opacity: 0;
+            transition: opacity var(--transition-normal);
+            z-index: -1;
+        }
+
+        .nav-link:hover::before,
+        .nav-link.active::before {
+            opacity: 1;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--primary-black);
             transform: translateY(-2px);
         }
 
-        .nav-links a::after {
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            z-index: 10;
+        }
+
+        .mobile-menu-btn span {
+            width: 25px;
+            height: 3px;
+            background: var(--primary-gold);
+            border-radius: 2px;
+            transition: all var(--transition-normal);
+        }
+
+        .mobile-menu-btn.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .mobile-menu-btn.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-btn.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: var(--gradient-dark);
+            overflow: hidden;
+        }
+
+        .hero::before {
             content: '';
             position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--gold);
-            transition: width 0.3s ease;
+            inset: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 215, 0, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(255, 215, 0, 0.06) 0%, transparent 50%);
+            animation: float 20s ease-in-out infinite;
         }
 
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        /* Main Content */
-        main {
-            margin-top: 80px;
-        }
-
-        .hero {
+        .hero-content {
             text-align: center;
-            padding: 4rem 0;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M 50 0 L 0 0 0 50" fill="none" stroke="%23FFD700" stroke-width="1" opacity="0.1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
-            background-size: cover;
-            background-attachment: fixed;
+            z-index: 2;
+            position: relative;
+            max-width: 900px;
         }
 
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(45deg, var(--gold), var(--white));
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 215, 0, 0.1);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--primary-gold);
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+            animation: fadeInUp 0.8s ease var(--transition-normal);
+        }
+
+        .hero-title {
+            background: linear-gradient(135deg, var(--white) 0%, var(--primary-gold) 50%, var(--white) 100%);
+            background-size: 200% 200%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            animation: fadeInUp 1s ease;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: gradientShift 4s ease-in-out infinite, fadeInUp 1s ease 0.2s both;
+            margin-bottom: 1.5rem;
         }
 
-        .hero .tagline {
-            font-size: 1.5rem;
-            color: var(--gold);
-            margin-bottom: 1rem;
+        .hero-subtitle {
+            font-size: clamp(1.25rem, 4vw, 2rem);
+            color: var(--primary-gold);
             font-weight: 600;
-            animation: fadeInUp 1s ease 0.2s both;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+            margin-bottom: 1.5rem;
             animation: fadeInUp 1s ease 0.4s both;
         }
 
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(45deg, var(--gold), var(--dark-gold));
-            color: var(--black);
-            padding: 1rem 2rem;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
+        .hero-description {
+            font-size: clamp(1.1rem, 3vw, 1.25rem);
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 700px;
+            margin: 0 auto 3rem;
             animation: fadeInUp 1s ease 0.6s both;
-            box-shadow: 0 4px 15px var(--shadow-gold);
-            text-transform: uppercase;
-            letter-spacing: 1px;
         }
 
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px var(--shadow-gold);
-            background: linear-gradient(45deg, var(--white), var(--gold));
+        /* Call to Action Button */
+        .cta-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: var(--gradient-gold);
+            color: var(--primary-black);
+            text-decoration: none;
+            padding: 1.25rem 2.5rem;
+            border-radius: var(--border-radius-xl);
+            font-weight: 700;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            transition: all var(--transition-normal);
+            box-shadow: var(--shadow-gold);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 1s ease 0.8s both;
+        }
+
+        .cta-primary::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, var(--white) 0%, var(--accent-gold) 100%);
+            opacity: 0;
+            transition: opacity var(--transition-normal);
+        }
+
+        .cta-primary:hover::before {
+            opacity: 1;
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 12px 40px rgba(255, 215, 0, 0.4);
+        }
+
+        .cta-primary span {
+            position: relative;
+            z-index: 1;
         }
 
         /* Services Section */
         .services {
-            background: var(--dark-gray);
-            padding: 4rem 0;
-            margin: 2rem 0;
+            background: var(--secondary-black);
+            position: relative;
         }
 
-        .services h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: var(--gold);
+        .services::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(to bottom, var(--primary-black), var(--secondary-black));
         }
 
-        .services .subtitle {
+        .section-header {
             text-align: center;
-            font-size: 1.1rem;
-            margin-bottom: 3rem;
-            opacity: 0.8;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            color: var(--primary-gold);
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -0.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--gradient-gold);
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
+            margin-top: 3rem;
         }
 
         .service-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            padding: 2rem;
-            border-radius: 15px;
-            border: 1px solid rgba(255, 215, 0, 0.3);
-            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: var(--border-radius-lg);
+            padding: 2.5rem;
             text-align: center;
+            transition: all var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--gradient-gold);
+            opacity: 0;
+            transition: opacity var(--transition-normal);
+        }
+
+        .service-card:hover::before {
+            opacity: 0.05;
         }
 
         .service-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--gold);
-            box-shadow: 0 15px 30px rgba(255, 215, 0, 0.2);
+            transform: translateY(-8px);
+            border-color: var(--primary-gold);
+            box-shadow: var(--shadow-elevation);
         }
 
-        .service-card h3 {
-            color: var(--gold);
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .service-card p {
+        .service-icon {
+            font-size: 3rem;
             margin-bottom: 1.5rem;
-            opacity: 0.9;
+            display: block;
+        }
+
+        .service-title {
+            color: var(--primary-gold);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-description {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
         }
 
         /* Technology Stack */
         .tech-stack {
             display: flex;
             flex-wrap: wrap;
-            gap: 1rem;
+            gap: 0.75rem;
             justify-content: center;
-            margin-top: 1rem;
+            position: relative;
+            z-index: 1;
         }
 
         .tech-item {
@@ -277,127 +624,285 @@
             align-items: center;
             gap: 0.5rem;
             background: rgba(255, 215, 0, 0.1);
+            border: 1px solid rgba(255, 215, 0, 0.3);
             padding: 0.5rem 1rem;
             border-radius: 20px;
-            font-size: 0.9rem;
-            border: 1px solid rgba(255, 215, 0, 0.3);
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--white);
+            transition: all var(--transition-fast);
+        }
+
+        .tech-item:hover {
+            background: rgba(255, 215, 0, 0.2);
+            transform: scale(1.05);
+        }
+
+        .tech-item img {
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
         }
 
         /* About Section */
         .about {
-            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(0, 0, 0, 0.8));
-            padding: 4rem 0;
-            text-align: center;
-        }
-
-        .about h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            color: var(--gold);
+            background: var(--gradient-dark);
+            position: relative;
         }
 
         .about-content {
-            max-width: 800px;
-            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
         }
 
-        .about p {
-            font-size: 1.1rem;
+        .about-text h2 {
+            color: var(--primary-gold);
+            margin-bottom: 2rem;
+        }
+
+        .about-text p {
+            color: rgba(255, 255, 255, 0.8);
             margin-bottom: 1.5rem;
-            opacity: 0.9;
         }
 
-        .founding-info {
-            background: rgba(255, 215, 0, 0.1);
-            padding: 2rem;
-            border-radius: 10px;
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
             margin-top: 2rem;
-            border-left: 4px solid var(--gold);
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(255, 215, 0, 0.05);
+            border-radius: var(--border-radius-md);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--primary-gold);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .about-features {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: var(--border-radius-lg);
+            padding: 2rem;
+            border: 1px solid rgba(255, 215, 0, 0.1);
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+        }
+
+        .feature-item:last-child {
+            border-bottom: none;
+        }
+
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .feature-text {
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 500;
         }
 
         /* Social Media Section */
         .social-media {
-            background: var(--black);
-            padding: 4rem 0;
-            text-align: center;
+            background: var(--primary-black);
+            position: relative;
         }
 
-        .social-media h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            color: var(--gold);
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            flex-wrap: wrap;
+            margin-top: 3rem;
         }
 
         .social-card {
-            background: linear-gradient(135deg, var(--dark-gray), var(--black));
-            padding: 2rem;
-            border-radius: 15px;
-            border: 2px solid var(--gold);
-            transition: all 0.3s ease;
+            background: var(--gradient-dark);
+            border: 2px solid var(--primary-gold);
+            border-radius: var(--border-radius-lg);
+            padding: 2.5rem;
+            text-align: center;
             text-decoration: none;
             color: var(--white);
-            min-width: 200px;
+            transition: all var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--gradient-gold);
+            opacity: 0;
+            transition: opacity var(--transition-normal);
+        }
+
+        .social-card:hover::before {
+            opacity: 0.1;
         }
 
         .social-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px var(--shadow-gold);
-            background: linear-gradient(135deg, var(--gold), var(--dark-gold));
-            color: var(--black);
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: var(--shadow-elevation);
+            color: var(--white);
         }
 
         .social-icon {
-            font-size: 2rem;
-            margin-bottom: 1rem;
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            display: block;
+            position: relative;
+            z-index: 1;
         }
 
-        .social-card h3 {
+        .social-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-gold);
             margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .social-handle {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1rem;
+            position: relative;
+            z-index: 1;
         }
 
         /* Footer */
-        footer {
-            background: var(--black);
-            color: var(--white);
+        .footer {
+            background: var(--secondary-black);
+            border-top: 1px solid rgba(255, 215, 0, 0.2);
             text-align: center;
-            padding: 2rem 0;
-            border-top: 1px solid var(--gold);
+            padding: 3rem 0 2rem;
         }
 
         .footer-content {
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
         }
 
         .footer-links {
             display: flex;
             justify-content: center;
             gap: 2rem;
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
             flex-wrap: wrap;
         }
 
-        .footer-links a {
-            color: var(--gold);
+        .footer-link {
+            color: var(--primary-gold);
             text-decoration: none;
-            transition: opacity 0.3s ease;
+            font-weight: 500;
+            transition: all var(--transition-fast);
         }
 
-        .footer-links a:hover {
-            opacity: 0.8;
+        .footer-link:hover {
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        .footer-text {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .footer-brand {
+            color: var(--primary-gold);
+            font-weight: 700;
+        }
+
+        /* Loading Screen */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-dark);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity var(--transition-slow), visibility var(--transition-slow);
+        }
+
+        .loading-screen.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader {
+            width: 60px;
+            height: 60px;
+            border: 3px solid rgba(255, 215, 0, 0.2);
+            border-top: 3px solid var(--primary-gold);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 2rem;
+        }
+
+        .loading-text {
+            color: var(--primary-gold);
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 700;
+            animation: pulse 2s ease-in-out infinite;
         }
 
         /* Animations */
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
         @keyframes fadeInUp {
             from {
                 opacity: 0;
-                transform: translateY(30px);
+                transform: translateY(40px);
             }
             to {
                 opacity: 1;
@@ -405,314 +910,1140 @@
             }
         }
 
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
 
-        .pulse {
-            animation: pulse 2s infinite;
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            33% { transform: translateY(-10px) rotate(1deg); }
+            66% { transform: translateY(5px) rotate(-1deg); }
+        }
+
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .slide-in-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.8s ease;
+        }
+
+        .slide-in-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .slide-in-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.8s ease;
+        }
+
+        .slide-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
         }
 
         /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
+        @media screen and (max-width: 1024px) {
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
             }
-            
-            .hero h1 {
-                font-size: 2.5rem;
+
+            .about-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
             }
-            
-            .hero .tagline {
-                font-size: 1.2rem;
+
+            .services-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             }
-            
-            .hero p {
-                font-size: 1rem;
+        }
+
+        @media screen and (max-width: 768px) {
+            .mobile-menu-btn {
+                display: flex;
             }
-            
+
+            .nav-menu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(0, 0, 0, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                gap: 0;
+                padding: 2rem 0;
+                border-top: 1px solid rgba(255, 215, 0, 0.2);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: all var(--transition-normal);
+            }
+
+            .nav-menu.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .nav-link {
+                padding: 1rem 2rem;
+                border-radius: 0;
+                text-align: center;
+            }
+
             .services-grid {
                 grid-template-columns: 1fr;
+                gap: 1.5rem;
             }
-            
-            .social-links {
+
+            .social-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .about-stats {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .footer-links {
                 flex-direction: column;
-                align-items: center;
+                gap: 1rem;
             }
-            
+
+            .hero-content {
+                padding: 2rem 1rem;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            :root {
+                --section-padding: 2rem 0;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            .service-card,
+            .social-card {
+                padding: 2rem;
+            }
+
             .tech-stack {
-                justify-content: center;
+                gap: 0.5rem;
+            }
+
+            .tech-item {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.8rem;
+            }
+
+            .cta-primary {
+                padding: 1rem 2rem;
+                font-size: 1rem;
             }
         }
 
-        /* Loading Animation */
-        .loading {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--black);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            transition: opacity 0.5s ease;
+        /* High DPI and Retina Display Support */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            .tech-item img {
+                width: 20px;
+                height: 20px;
+            }
         }
 
-        .loader {
-            width: 50px;
-            height: 50px;
-            border: 3px solid rgba(255, 215, 0, 0.3);
-            border-top: 3px solid var(--gold);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
+        /* Dark mode support for system preference */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --light-gray: #1A1A1A;
+                --off-white: #0D0D0D;
+            }
         }
 
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+
+            html {
+                scroll-behavior: auto;
+            }
+        }
+
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            :root {
+                --primary-gold: #FFFF00;
+                --primary-black: #000000;
+                --white: #FFFFFF;
+            }
+        }
+
+        /* Focus styles for accessibility */
+        *:focus {
+            outline: 2px solid var(--primary-gold);
+            outline-offset: 2px;
+        }
+
+        *:focus:not(:focus-visible) {
+            outline: none;
+        }
+
+        *:focus-visible {
+            outline: 2px solid var(--primary-gold);
+            outline-offset: 2px;
         }
     </style>
 </head>
 <body>
     <!-- Loading Screen -->
-    <div class="loading" id="loading">
-        <div class="loader"></div>
+    <div class="loading-screen" id="loadingScreen" aria-hidden="true">
+        <div class="loader" role="progressbar" aria-label="Loading"></div>
+        <div class="loading-text">Wijaksara Studio</div>
     </div>
 
-    <header>
-        <nav class="container">
-            <div class="logo">Wijaksara Studio</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#social">Social</a></li>
+    <!-- Header -->
+    <header class="header" id="header" role="banner">
+        <nav class="navbar container" role="navigation" aria-label="Main navigation">
+            <a href="#" class="logo" aria-label="Wijaksara Studio Home">
+                Wijaksara Studio
+            </a>
+            
+            <ul class="nav-menu" id="navMenu" role="menubar">
+                <li role="none">
+                    <a href="#home" class="nav-link active" role="menuitem" aria-current="page">Home</a>
+                </li>
+                <li role="none">
+                    <a href="#services" class="nav-link" role="menuitem">Services</a>
+                </li>
+                <li role="none">
+                    <a href="#about" class="nav-link" role="menuitem">About</a>
+                </li>
+                <li role="none">
+                    <a href="#social" class="nav-link" role="menuitem">Social</a>
+                </li>
             </ul>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
     </header>
 
-    <main>
-        <section id="home" class="hero">
+    <!-- Main Content -->
+    <main id="main" role="main">
+        <!-- Hero Section -->
+        <section id="home" class="hero section-padding" role="banner">
             <div class="container">
-                <h1>Wijaksara Studio</h1>
-                <div class="tagline">Premium Digital Solutions from Indonesia</div>
-                <p>We specialize in game development, 2D/3D art & animation, mobile apps, and web development. From concept to reality, we bring your digital dreams to life with elegance and professionalism.</p>
-                <a href="#services" class="cta-button">Let Dreams Come True</a>
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span>🎮</span>
+                        <span>Est. 2023 • Full Operations Since 2025</span>
+                    </div>
+                    
+                    <h1 class="hero-title">
+                        Wijaksara Studio
+                    </h1>
+                    
+                    <p class="hero-subtitle">
+                        Premium Digital Solutions from Indonesia
+                    </p>
+                    
+                    <p class="hero-description">
+                        We are an indie studio specializing in game development, 2D/3D art & animation, 
+                        mobile applications, and web development. From Unity and Godot games to Flutter apps 
+                        and Laravel websites - we bring digital dreams to life with Indonesian craftsmanship.
+                    </p>
+                    
+                    <a href="#services" class="cta-primary" role="button">
+                        <span>Let Dreams Come True</span>
+                        <span>✨</span>
+                    </a>
+                </div>
             </div>
         </section>
 
-        <section id="services" class="services">
+        <!-- Services Section -->
+        <section id="services" class="services section-padding fade-in" role="region" aria-labelledby="services-title">
             <div class="container">
-                <h2>Our Expertise</h2>
-                <p class="subtitle">Crafting digital experiences with cutting-edge technology</p>
+                <div class="section-header">
+                    <h2 id="services-title" class="section-title">Our Expertise</h2>
+                    <p class="section-subtitle lead">
+                        Crafting exceptional digital experiences with cutting-edge technology 
+                        and Indonesian creative excellence
+                    </p>
+                </div>
+
                 <div class="services-grid">
-                    <div class="service-card">
-                        <h3>🎮 Game Development</h3>
-                        <p>Creating immersive gaming experiences from indie titles to commercial games using industry-standard tools.</p>
-                        <div class="tech-stack">
-                            <div class="tech-item">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg" alt="Unity" width="20" height="20">
-                                Unity
+                    <article class="service-card fade-in">
+                        <div class="service-icon" role="img" aria-label="Game Development">🎮</div>
+                        <h3 class="service-title">Game Development</h3>
+                        <p class="service-description">
+                            Creating immersive gaming experiences from indie titles to commercial games 
+                            using industry-standard engines and tools.
+                        </p>
+                        <div class="tech-stack" role="list" aria-label="Game development technologies">
+                            <div class="tech-item" role="listitem">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg" 
+                                     alt="Unity Engine" width="20" height="20" loading="lazy">
+                                <span>Unity</span>
                             </div>
-                            <div class="tech-item">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/godot/godot-original.svg" alt="Godot" width="20" height="20">
-                                Godot
+                            <div class="tech-item" role="listitem">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/godot/godot-original.svg" 
+                                     alt="Godot Engine" width="20" height="20" loading="lazy">
+                                <span>Godot</span>
                             </div>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="service-card">
-                        <h3>🎨 2D/3D Art & Animation</h3>
-                        <p>Professional digital art creation including pixel art, 3D modeling, texturing, and character animation.</p>
-                        <div class="tech-stack">
-                            <div class="tech-item">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg" alt="Blender" width="20" height="20">
-                                Blender
+                    <article class="service-card fade-in">
+                        <div class="service-icon" role="img" aria-label="2D/3D Art & Animation">🎨</div>
+                        <h3 class="service-title">2D/3D Art & Animation</h3>
+                        <p class="service-description">
+                            Professional digital art creation including pixel art, 3D modeling, 
+                            texturing, rigging, and character animation.
+                        </p>
+                        <div class="tech-stack" role="list" aria-label="Art and animation tools">
+                            <div class="tech-item" role="listitem">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg" 
+                                     alt="Blender 3D" width="20" height="20" loading="lazy">
+                                <span>Blender</span>
                             </div>
-                            <div class="tech-item">
-                                <img src="https://www.aseprite.org/assets/images/aseprite-logo.png" alt="Aseprite" width="20" height="20">
-                                Aseprite
+                            <div class="tech-item" role="listitem">
+                                <img src="https://www.aseprite.org/assets/images/aseprite-logo.png" 
+                                     alt="Aseprite" width="20" height="20" loading="lazy">
+                                <span>Aseprite</span>
                             </div>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="service-card">
-                        <h3>📱 Mobile App Development</h3>
-                        <p>Cross-platform mobile applications with native performance and beautiful user interfaces.</p>
-                        <div class="tech-stack">
-                            <div class="tech-item">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" width="20" height="20">
-                                Flutter
+                    <article class="service-card fade-in">
+                        <div class="service-icon" role="img" aria-label="Mobile App Development">📱</div>
+                        <h3 class="service-title">Mobile App Development</h3>
+                        <p class="service-description">
+                            Cross-platform mobile applications with native performance, 
+                            beautiful user interfaces, and seamless user experiences.
+                        </p>
+                        <div class="tech-stack" role="list" aria-label="Mobile development technologies">
+                            <div class="tech-item" role="listitem">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" 
+                                     alt="Flutter" width="20" height="20" loading="lazy">
+                                <span>Flutter</span>
                             </div>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="service-card">
-                        <h3>🌐 Web Development</h3>
-                        <p>Modern, responsive websites and web applications built with robust backend systems and elegant frontend design.</p>
-                        <div class="tech-stack">
-                            <div class="tech-item">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg" alt="Laravel" width="20" height="20">
-                                Laravel
+                    <article class="service-card fade-in">
+                        <div class="service-icon" role="img" aria-label="Web Development">🌐</div>
+                        <h3 class="service-title">Web Development</h3>
+                        <p class="service-description">
+                            Modern, responsive websites and web applications built with robust 
+                            backend systems and elegant frontend design.
+                        </p>
+                        <div class="tech-stack" role="list" aria-label="Web development technologies">
+                            <div class="tech-item" role="listitem">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg" 
+                                     alt="Laravel Framework" width="20" height="20" loading="lazy">
+                                <span>Laravel</span>
                             </div>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="about">
+        <!-- About Section -->
+        <section id="about" class="about section-padding" role="region" aria-labelledby="about-title">
             <div class="container">
-                <h2>About Wijaksara Studio</h2>
                 <div class="about-content">
-                    <p>
-                        Wijaksara Studio is an independent digital creative studio from Indonesia, where tradition meets innovation. 
-                        Our name, derived from Javanese meaning "wisdom" or "wise knowledge," reflects our commitment to bringing 
-                        thoughtful and intelligent solutions to every project we undertake.
-                    </p>
-                    <p>
-                        We are a team of passionate creators specializing in game development, digital art, animation, and application development. 
-                        Our expertise spans across multiple disciplines, allowing us to provide comprehensive digital solutions that are both 
-                        elegant and professional, while remaining approachable and collaborative.
-                    </p>
-                    <div class="founding-info">
-                        <h3>Our Journey</h3>
-                        <p><strong>Founded:</strong> 2023</p>
-                        <p><strong>Full Operations:</strong> Since 2025</p>
-                        <p><strong>Mission:</strong> To transform creative visions into digital reality with wisdom, elegance, and innovation.</p>
+                    <div class="about-text slide-in-left">
+                        <h2 id="about-title" class="section-title">About Wijaksara Studio</h2>
+                        <p class="lead">
+                            <strong>Wijaksara Studio</strong> is an independent digital creative studio from Indonesia, 
+                            where tradition meets innovation. Our name, derived from Javanese meaning 
+                            <em>"wisdom"</em> or <em>"wise knowledge"</em>, reflects our commitment to bringing 
+                            thoughtful and intelligent solutions to every project.
+                        </p>
+                        <p>
+                            We are a passionate team of digital artisans specializing in game development, 
+                            digital art, animation, and application development. Our expertise spans multiple 
+                            disciplines, allowing us to provide comprehensive digital solutions that are both 
+                            elegant and professional.
+                        </p>
+                        <p>
+                            Since our founding in 2023 and full operations launch in 2025, we've been dedicated 
+                            to transforming creative visions into digital reality with Indonesian craftsmanship 
+                            and global standards.
+                        </p>
+                        
+                        <div class="about-stats">
+                            <div class="stat-item fade-in">
+                                <span class="stat-number">2023</span>
+                                <span class="stat-label">Founded</span>
+                            </div>
+                            <div class="stat-item fade-in">
+                                <span class="stat-number">2025</span>
+                                <span class="stat-label">Full Operations</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-features slide-in-right">
+                        <h3 style="color: var(--primary-gold); margin-bottom: 2rem; text-align: center;">
+                            Why Choose Wijaksara?
+                        </h3>
+                        <ul class="feature-list" role="list">
+                            <li class="feature-item" role="listitem">
+                                <div class="feature-icon" role="img" aria-label="Indonesian Craftsmanship">🇮🇩</div>
+                                <span class="feature-text">Indonesian Craftsmanship with Global Standards</span>
+                            </li>
+                            <li class="feature-item" role="listitem">
+                                <div class="feature-icon" role="img" aria-label="Full-Stack Solutions">⚡</div>
+                                <span class="feature-text">Full-Stack Digital Solutions</span>
+                            </li>
+                            <li class="feature-item" role="listitem">
+                                <div class="feature-icon" role="img" aria-label="Cutting-Edge Technology">🚀</div>
+                                <span class="feature-text">Cutting-Edge Technology Stack</span>
+                            </li>
+                            <li class="feature-item" role="listitem">
+                                <div class="feature-icon" role="img" aria-label="Collaborative Approach">🤝</div>
+                                <span class="feature-text">Collaborative & Transparent Process</span>
+                            </li>
+                            <li class="feature-item" role="listitem">
+                                <div class="feature-icon" role="img" aria-label="Creative Excellence">✨</div>
+                                <span class="feature-text">Creative Excellence & Innovation</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="social" class="social-media">
+        <!-- Social Media Section -->
+        <section id="social" class="social-media section-padding fade-in" role="region" aria-labelledby="social-title">
             <div class="container">
-                <h2>Connect With Us</h2>
-                <p>Follow our journey and see our latest works</p>
-                <div class="social-links">
-                    <a href="https://www.instagram.com/wijaksara.studio" target="_blank" class="social-card" rel="noopener noreferrer">
-                        <div class="social-icon">📷</div>
-                        <h3>Instagram</h3>
-                        <p>@wijaksara.studio</p>
+                <div class="section-header">
+                    <h2 id="social-title" class="section-title">Connect With Us</h2>
+                    <p class="section-subtitle lead">
+                        Follow our journey, see our latest works, and join our creative community
+                    </p>
+                </div>
+
+                <div class="social-grid">
+                    <a href="https://www.instagram.com/wijaksara.studio" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="social-card fade-in"
+                       aria-label="Follow Wijaksara Studio on Instagram">
+                        <div class="social-icon" role="img" aria-label="Instagram">📷</div>
+                        <h3 class="social-name">Instagram</h3>
+                        <p class="social-handle">@wijaksara.studio</p>
                     </a>
-                    <a href="https://www.tiktok.com/@wijaksara.studio" target="_blank" class="social-card" rel="noopener noreferrer">
-                        <div class="social-icon">🎵</div>
-                        <h3>TikTok</h3>
-                        <p>@wijaksara.studio</p>
+                    
+                    <a href="https://www.tiktok.com/@wijaksara.studio" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="social-card fade-in"
+                       aria-label="Follow Wijaksara Studio on TikTok">
+                        <div class="social-icon" role="img" aria-label="TikTok">🎵</div>
+                        <h3 class="social-name">TikTok</h3>
+                        <p class="social-handle">@wijaksara.studio</p>
                     </a>
-                    <a href="https://www.youtube.com/@WIJAKSARASTUDIO" target="_blank" class="social-card" rel="noopener noreferrer">
-                        <div class="social-icon">📺</div>
-                        <h3>YouTube</h3>
-                        <p>@WIJAKSARASTUDIO</p>
+                    
+                    <a href="https://www.youtube.com/@WIJAKSARASTUDIO" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="social-card fade-in"
+                       aria-label="Subscribe to Wijaksara Studio on YouTube">
+                        <div class="social-icon" role="img" aria-label="YouTube">📺</div>
+                        <h3 class="social-name">YouTube</h3>
+                        <p class="social-handle">@WIJAKSARASTUDIO</p>
                     </a>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-links">
-                    <a href="https://www.instagram.com/wijaksara.studio" target="_blank" rel="noopener noreferrer">Instagram</a>
-                    <a href="https://www.tiktok.com/@wijaksara.studio" target="_blank" rel="noopener noreferrer">TikTok</a>
-                    <a href="https://www.youtube.com/@WIJAKSARASTUDIO" target="_blank" rel="noopener noreferrer">YouTube</a>
+                <nav class="footer-links" role="navigation" aria-label="Footer navigation">
+                    <a href="https://www.instagram.com/wijaksara.studio" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="footer-link">Instagram</a>
+                    <a href="https://www.tiktok.com/@wijaksara.studio" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="footer-link">TikTok</a>
+                    <a href="https://www.youtube.com/@WIJAKSARASTUDIO" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="footer-link">YouTube</a>
+                </nav>
+                
+                <div class="footer-text">
+                    <p>&copy; 2025 <span class="footer-brand">Wijaksara Studio</span>. All rights reserved.</p>
+                    <p>Crafted with ❤️ in Indonesia | <strong>Let Dreams Come True</strong></p>
+                    <p><small>Wijaksara means "Wise Knowledge" in Javanese</small></p>
                 </div>
-                <p>&copy; 2025 Wijaksara Studio. All rights reserved.</p>
-                <p>Crafted with ❤️ in Indonesia | Let Dreams Come True</p>
             </div>
         </div>
     </footer>
 
+    <!-- JavaScript -->
     <script>
-        // Loading Screen
-        window.addEventListener('load', function() {
-            const loading = document.getElementById('loading');
-            setTimeout(() => {
-                loading.style.opacity = '0';
-                setTimeout(() => {
-                    loading.style.display = 'none';
-                }, 500);
-            }, 1000);
-        });
+        // Performance and Accessibility Optimizations
+        (function() {
+            'use strict';
 
-        // Smooth scrolling for navigation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
+            // Loading Screen Management
+            const loadingScreen = document.getElementById('loadingScreen');
+            const minimumLoadingTime = 1500; // Minimum loading time for UX
+            const startTime = performance.now();
+
+            function hideLoadingScreen() {
+                const elapsedTime = performance.now() - startTime;
+                const remainingTime = Math.max(0, minimumLoadingTime - elapsedTime);
+                
+                setTimeout(() => {
+                    loadingScreen.classList.add('hidden');
+                    document.body.style.overflow = 'auto'; // Re-enable scrolling
+                    
+                    // Remove loading screen from DOM after animation
+                    setTimeout(() => {
+                        if (loadingScreen.parentNode) {
+                            loadingScreen.remove();
+                        }
+                    }, 500);
+                }, remainingTime);
+            }
+
+            // Wait for page load
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', hideLoadingScreen);
+            } else {
+                hideLoadingScreen();
+            }
+
+            // Prevent scrolling during loading
+            document.body.style.overflow = 'hidden';
+
+            // Mobile Menu Functionality
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const navMenu = document.getElementById('navMenu');
+            
+            if (mobileMenuBtn && navMenu) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                    
+                    this.setAttribute('aria-expanded', !isExpanded);
+                    this.classList.toggle('active');
+                    navMenu.classList.toggle('active');
+                });
+
+                // Close mobile menu when clicking nav links
+                navMenu.addEventListener('click', function(e) {
+                    if (e.target.classList.contains('nav-link')) {
+                        mobileMenuBtn.classList.remove('active');
+                        navMenu.classList.remove('active');
+                        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                    }
+                });
+
+                // Close mobile menu when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!mobileMenuBtn.contains(e.target) && !navMenu.contains(e.target)) {
+                        mobileMenuBtn.classList.remove('active');
+                        navMenu.classList.remove('active');
+                        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            }
+
+            // Header Scroll Effect
+            const header = document.getElementById('header');
+            let lastScrollY = window.scrollY;
+            let ticking = false;
+
+            function updateHeader() {
+                const scrollY = window.scrollY;
+                
+                if (scrollY > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+                
+                lastScrollY = scrollY;
+                ticking = false;
+            }
+
+            function onScroll() {
+                if (!ticking) {
+                    requestAnimationFrame(updateHeader);
+                    ticking = true;
+                }
+            }
+
+            window.addEventListener('scroll', onScroll, { passive: true });
+
+            // Smooth Scrolling with offset for fixed header
+            const navLinks = document.querySelectorAll('a[href^="#"]');
+            const headerHeight = header ? header.offsetHeight : 0;
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href').slice(1);
+                    const targetElement = document.getElementById(targetId);
+                    
+                    if (targetElement) {
+                        const offsetTop = targetElement.offsetTop - headerHeight - 20;
+                        
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+
+                        // Update active nav link
+                        updateActiveNavLink(targetId);
+                    }
+                });
+            });
+
+            // Active Navigation Link Management
+            function updateActiveNavLink(activeId) {
+                navLinks.forEach(link => {
+                    const href = link.getAttribute('href').slice(1);
+                    if (href === activeId) {
+                        link.classList.add('active');
+                        link.setAttribute('aria-current', 'page');
+                    } else {
+                        link.classList.remove('active');
+                        link.removeAttribute('aria-current');
+                    }
+                });
+            }
+
+            // Intersection Observer for Scroll Animations
+            const observerOptions = {
+                root: null,
+                rootMargin: '-10% 0px -10% 0px',
+                threshold: [0.1, 0.3, 0.5]
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        
+                        // Update active navigation based on visible section
+                        const sectionId = entry.target.id;
+                        if (sectionId && entry.intersectionRatio > 0.3) {
+                            updateActiveNavLink(sectionId);
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            // Observe sections and animated elements
+            const sectionsToObserve = document.querySelectorAll('section[id], .fade-in, .slide-in-left, .slide-in-right');
+            sectionsToObserve.forEach(section => observer.observe(section));
+
+            // Parallax Effect for Hero Section (Performance Optimized)
+            const hero = document.querySelector('.hero');
+            let parallaxTicking = false;
+
+            function updateParallax() {
+                if (hero) {
+                    const scrolled = window.scrollY;
+                    const rate = scrolled * -0.3;
+                    const transform = `translate3d(0, ${rate}px, 0)`;
+                    hero.style.transform = transform;
+                }
+                parallaxTicking = false;
+            }
+
+            function onScrollParallax() {
+                if (!parallaxTicking && window.innerWidth > 768) {
+                    requestAnimationFrame(updateParallax);
+                    parallaxTicking = true;
+                }
+            }
+
+            // Only enable parallax on larger screens
+            if (window.innerWidth > 768) {
+                window.addEventListener('scroll', onScrollParallax, { passive: true });
+            }
+
+            // Performance: Debounced Resize Handler
+            let resizeTimeout;
+            window.addEventListener('resize', function() {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(function() {
+                    // Re-calculate header height
+                    const newHeaderHeight = header ? header.offsetHeight : 0;
+                    
+                    // Enable/disable parallax based on screen size
+                    if (window.innerWidth <= 768) {
+                        window.removeEventListener('scroll', onScrollParallax);
+                        if (hero) hero.style.transform = 'none';
+                    } else if (window.innerWidth > 768) {
+                        window.addEventListener('scroll', onScrollParallax, { passive: true });
+                    }
+                }, 150);
+            });
+
+            // Keyboard Navigation Enhancement
+            document.addEventListener('keydown', function(e) {
+                // Close mobile menu with Escape key
+                if (e.key === 'Escape' && navMenu && navMenu.classList.contains('active')) {
+                    mobileMenuBtn.classList.remove('active');
+                    navMenu.classList.remove('active');
+                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                    mobileMenuBtn.focus();
+                }
+            });
+
+            // External Link Security
+            const externalLinks = document.querySelectorAll('a[target="_blank"]');
+            externalLinks.forEach(link => {
+                if (!link.hasAttribute('rel')) {
+                    link.setAttribute('rel', 'noopener noreferrer');
+                }
+            });
+
+            // Preload Critical Images
+            function preloadCriticalImages() {
+                const criticalImages = [
+                    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg',
+                    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/godot/godot-original.svg',
+                    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg',
+                    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg',
+                    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg',
+                    'https://www.aseprite.org/assets/images/aseprite-logo.png'
+                ];
+
+                criticalImages.forEach(src => {
+                    const link = document.createElement('link');
+                    link.rel = 'preload';
+                    link.as = 'image';
+                    link.href = src;
+                    document.head.appendChild(link);
+                });
+            }
+
+            // Call preload function
+            preloadCriticalImages();
+
+            // Error Handling for Images
+            function handleImageError(img) {
+                img.style.display = 'none';
+                console.warn(`Failed to load image: ${img.src}`);
+            }
+
+            // Add error handling to all images
+            document.querySelectorAll('img').forEach(img => {
+                img.addEventListener('error', () => handleImageError(img));
+            });
+
+            // Analytics and Performance Monitoring (placeholder)
+            function trackPerformance() {
+                if ('performance' in window && 'measure' in performance) {
+                    window.addEventListener('load', () => {
+                        setTimeout(() => {
+                            const perfData = performance.getEntriesByType('navigation')[0];
+                            const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
+                            
+                            // You can send this data to your analytics service
+                            console.log(`Page load time: ${loadTime}ms`);
+                        }, 0);
                     });
                 }
-            });
-        });
+            }
 
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
+            trackPerformance();
+
+            // Service Worker Registration (optional)
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/sw.js')
+                        .then(registration => {
+                            console.log('SW registered: ', registration);
+                        })
+                        .catch(registrationError => {
+                            console.log('SW registration failed: ', registrationError);
+                        });
+                });
+            }
+
+            // Theme Detection and Adaptation
+            function detectThemePreference() {
+                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+                    // User prefers light mode - we can adjust accordingly if needed
+                    document.documentElement.setAttribute('data-theme', 'light');
+                } else {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                }
+            }
+
+            detectThemePreference();
+
+            // Listen for theme changes
+            if (window.matchMedia) {
+                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', detectThemePreference);
+            }
+
+            // Reduced Motion Support
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+            
+            function handleReducedMotion(e) {
+                if (e.matches) {
+                    document.documentElement.style.setProperty('--transition-fast', '0.01ms');
+                    document.documentElement.style.setProperty('--transition-normal', '0.01ms');
+                    document.documentElement.style.setProperty('--transition-slow', '0.01ms');
+                } else {
+                    document.documentElement.style.removeProperty('--transition-fast');
+                    document.documentElement.style.removeProperty('--transition-normal');
+                    document.documentElement.style.removeProperty('--transition-slow');
+                }
+            }
+
+            prefersReducedMotion.addEventListener('change', handleReducedMotion);
+            handleReducedMotion(prefersReducedMotion);
+
+            // Social Media Link Analytics (placeholder)
+            function trackSocialClick(platform) {
+                // You can implement analytics tracking here
+                console.log(`Social media click: ${platform}`);
+                
+                // Example: Google Analytics 4
+                // gtag('event', 'social_click', {
+                //     'social_platform': platform,
+                //     'page_title': document.title
+                // });
+            }
+
+            // Add click tracking to social links
+            document.querySelectorAll('.social-card, .footer-link').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    let platform = 'unknown';
+                    
+                    if (href.includes('instagram.com')) platform = 'instagram';
+                    else if (href.includes('tiktok.com')) platform = 'tiktok';
+                    else if (href.includes('youtube.com')) platform = 'youtube';
+                    
+                    trackSocialClick(platform);
+                });
+            });
+
+            // Copy to Clipboard Functionality (for contact info if added later)
+            function copyToClipboard(text) {
+                if (navigator.clipboard) {
+                    return navigator.clipboard.writeText(text);
+                } else {
+                    // Fallback for older browsers
+                    const textArea = document.createElement('textarea');
+                    textArea.value = text;
+                    document.body.appendChild(textArea);
+                    textArea.focus();
+                    textArea.select();
+                    try {
+                        document.execCommand('copy');
+                        document.body.removeChild(textArea);
+                        return Promise.resolve();
+                    } catch (err) {
+                        document.body.removeChild(textArea);
+                        return Promise.reject(err);
+                    }
+                }
+            }
+
+            // Toast Notification System (utility)
+            function showToast(message, type = 'info', duration = 3000) {
+                const toast = document.createElement('div');
+                toast.className = `toast toast-${type}`;
+                toast.textContent = message;
+                
+                toast.style.cssText = `
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    background: var(--gradient-gold);
+                    color: var(--primary-black);
+                    padding: 1rem 1.5rem;
+                    border-radius: var(--border-radius-md);
+                    font-weight: 600;
+                    z-index: 10000;
+                    animation: slideInRight 0.3s ease;
+                    box-shadow: var(--shadow-elevation);
+                `;
+                
+                document.body.appendChild(toast);
+                
+                setTimeout(() => {
+                    toast.style.animation = 'slideOutRight 0.3s ease forwards';
+                    setTimeout(() => {
+                        if (toast.parentNode) {
+                            toast.remove();
+                        }
+                    }, 300);
+                }, duration);
+            }
+
+            // Add toast animations to CSS dynamically
+            const toastStyles = document.createElement('style');
+            toastStyles.textContent = `
+                @keyframes slideInRight {
+                    from { transform: translateX(100%); opacity: 0; }
+                    to { transform: translateX(0); opacity: 1; }
+                }
+                @keyframes slideOutRight {
+                    from { transform: translateX(0); opacity: 1; }
+                    to { transform: translateX(100%); opacity: 0; }
+                }
+            `;
+            document.head.appendChild(toastStyles);
+
+            // Initialize everything when DOM is ready
+            function initializeApp() {
+                console.log('🎮 Wijaksara Studio website initialized');
+                console.log('✨ Let Dreams Come True!');
+                
+                // Add any additional initialization code here
+                
+                // Example: Show welcome message (optional)
+                // setTimeout(() => {
+                //     showToast('Welcome to Wijaksara Studio! 🎮', 'info', 4000);
+                // }, 2000);
+            }
+
+            // Call initialization
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initializeApp);
+            } else {
+                initializeApp();
+            }
+
+        })();
+
+        // Additional utility functions for future enhancements
+        
+        // Lazy loading utility
+        function lazyLoadImages() {
+            const images = document.querySelectorAll('img[data-src]');
+            
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.classList.remove('lazy');
+                        observer.unobserve(img);
+                    }
+                });
+            });
+            
+            images.forEach(img => imageObserver.observe(img));
+        }
+
+        // Form validation utility (for future contact forms)
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+
+        // Smooth reveal animation utility
+        function createRevealAnimation(element, delay = 0) {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(30px)';
+            
+            setTimeout(() => {
+                element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                element.style.opacity = '1';
+                element.style.transform = 'translateY(0)';
+            }, delay);
+        }
+
+        // Device detection utility
+        const deviceInfo = {
+            isMobile: /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),
+            isTablet: /iPad|Android/i.test(navigator.userAgent) && window.innerWidth >= 768,
+            isDesktop: window.innerWidth >= 1024,
+            hasTouch: 'ontouchstart' in window || navigator.maxTouchPoints > 0
         };
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
+        // Expose utilities globally for debugging
+        window.WijaksaraUtils = {
+            showToast,
+            copyToClipboard,
+            validateEmail,
+            deviceInfo,
+            createRevealAnimation
+        };
 
-        // Observe service cards
-        document.querySelectorAll('.service-card').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(30px)';
-            card.style.transition = 'all 0.6s ease';
-            observer.observe(card);
-        });
-
-        // Observe social cards
-        document.querySelectorAll('.social-card').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(30px)';
-            card.style.transition = 'all 0.6s ease';
-            observer.observe(card);
-        });
-
-        // Parallax effect for hero section
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const hero = document.querySelector('.hero');
-            if (hero && scrolled < window.innerHeight) {
-                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-            }
-        });
-
-        // Header background on scroll
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.style.background = 'rgba(0, 0, 0, 0.98)';
-            } else {
-                header.style.background = 'rgba(0, 0, 0, 0.95)';
-            }
-        });
-
-        // Add pulse animation to CTA button
-        const ctaButton = document.querySelector('.cta-button');
-        if (ctaButton) {
-            setInterval(() => {
-                ctaButton.classList.add('pulse');
-                setTimeout(() => {
-                    ctaButton.classList.remove('pulse');
-                }, 1000);
-            }, 5000);
-        }
     </script>
+
+    <!-- Schema.org Article markup for better SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Wijaksara Studio",
+      "description": "Premium indie game development studio from Indonesia specializing in Unity, Godot, 2D/3D art, mobile apps, and web development.",
+      "url": "https://wijaksara.netlify.app/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://wijaksara.netlify.app/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Wijaksara Studio",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://wijaksara.netlify.app/logo.png"
+        }
+      }
+    }
+    </script>
+
+    <!-- Additional meta for mobile apps -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Wijaksara Studio">
+    
+    <!-- Structured data for services -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Wijaksara Studio",
+      "image": "https://wijaksara.netlify.app/logo.png",
+      "description": "Professional game development, mobile app development, and web development services from Indonesia.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "ID"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "addressCountry": "ID"
+      },
+      "serviceType": [
+        "Game Development",
+        "Mobile Application Development", 
+        "Web Development",
+        "2D/3D Art & Animation"
+      ],
+      "areaServed": "Worldwide",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Digital Development Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Unity Game Development",
+              "description": "Professional Unity 2D and 3D game development services"
+            }
+          },
+          {
+            "@type": "Offer", 
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Godot Game Development",
+              "description": "Indie game development using Godot Engine"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service", 
+              "name": "Flutter Mobile Development",
+              "description": "Cross-platform mobile app development with Flutter"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Laravel Web Development", 
+              "description": "Professional web application development using Laravel framework"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Blender 3D Art & Animation",
+              "description": "Professional 3D modeling, texturing, and animation services"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "2D Pixel Art Creation",
+              "description": "High-quality 2D pixel art and sprite animation using Aseprite"
+            }
+          }
+        ]
+      },
+      "slogan": "Let Dreams Come True",
+      "foundingDate": "2023"
+    }
+    </script>
+
 </body>
 </html>
