@@ -98,7 +98,8 @@
       "sameAs": [
         "https://www.instagram.com/wijaksara.studio",
         "https://www.tiktok.com/@wijaksara.studio",
-        "https://www.youtube.com/@WIJAKSARASTUDIO"
+        "https://www.youtube.com/@WIJAKSARASTUDIO",
+        "https://www.fiverr.com/wijaksarastudio"
       ],
       "serviceType": [
         "Game Development",
@@ -763,6 +764,16 @@
             overflow: hidden;
         }
 
+        .social-card-featured {
+            background: var(--gradient-gold);
+            color: var(--primary-black);
+        }
+
+        .social-card-featured .social-name,
+        .social-card-featured .social-handle {
+            color: var(--primary-black);
+        }
+
         .social-card::before {
             content: '';
             position: absolute;
@@ -776,10 +787,23 @@
             opacity: 0.1;
         }
 
+        .social-card-featured::before {
+            background: var(--gradient-dark);
+            opacity: 0;
+        }
+
+        .social-card-featured:hover::before {
+            opacity: 0.1;
+        }
+
         .social-card:hover {
             transform: translateY(-8px) scale(1.02);
             box-shadow: var(--shadow-elevation);
             color: var(--white);
+        }
+
+        .social-card-featured:hover {
+            color: var(--primary-black);
         }
 
         .social-icon {
@@ -804,6 +828,592 @@
             font-size: 1rem;
             position: relative;
             z-index: 1;
+            margin-bottom: 1rem;
+        }
+
+        .social-cta {
+            background: rgba(255, 215, 0, 0.2);
+            border: 1px solid rgba(255, 215, 0, 0.4);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--primary-black);
+            margin-top: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .social-cta-section {
+            text-align: center;
+            margin-top: 4rem;
+            padding: 3rem 2rem;
+            background: rgba(255, 215, 0, 0.05);
+            border-radius: var(--border-radius-lg);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+
+        .social-cta-section h3 {
+            color: var(--primary-gold);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .social-cta-section p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: transparent;
+            color: var(--primary-gold);
+            text-decoration: none;
+            padding: 1.25rem 2.5rem;
+            border: 2px solid var(--primary-gold);
+            border-radius: var(--border-radius-xl);
+            font-weight: 700;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            transition: all var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-secondary::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--primary-gold);
+            opacity: 0;
+            transition: opacity var(--transition-normal);
+        }
+
+        .cta-secondary:hover::before {
+            opacity: 1;
+        }
+
+        .cta-secondary:hover {
+            color: var(--primary-black);
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 12px 40px rgba(255, 215, 0, 0.4);
+        }
+
+        .cta-secondary span {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Team Section */
+        .team {
+            background: var(--gradient-dark);
+            position: relative;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .team-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: var(--border-radius-lg);
+            padding: 2.5rem;
+            text-align: center;
+            transition: all var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .team-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--gradient-gold);
+            opacity: 0;
+            transition: opacity var(--transition-normal);
+        }
+
+        .team-card:hover::before {
+            opacity: 0.05;
+        }
+
+        .team-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary-gold);
+            box-shadow: var(--shadow-elevation);
+        }
+
+        .team-avatar {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .avatar-placeholder {
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--primary-black);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .team-info {
+            position: relative;
+            z-index: 1;
+        }
+
+        .team-name {
+            color: var(--primary-gold);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-alias {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 1rem;
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-role {
+            color: var(--white);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .team-description {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .team-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            justify-content: center;
+        }
+
+        .skill-tag {
+            background: rgba(255, 215, 0, 0.1);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--white);
+            transition: all var(--transition-fast);
+        }
+
+        .skill-tag:hover {
+            background: rgba(255, 215, 0, 0.2);
+            transform: scale(1.05);
+        }
+
+        /* Portfolio Section */
+        .portfolio {
+            background: var(--secondary-black);
+            position: relative;
+        }
+
+        .portfolio-filter {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: transparent;
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--primary-gold);
+            border-color: var(--primary-gold);
+            color: var(--primary-black);
+            transform: translateY(-2px);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .portfolio-item {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            transition: all var(--transition-normal);
+            position: relative;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary-gold);
+            box-shadow: var(--shadow-elevation);
+        }
+
+        .portfolio-image {
+            height: 200px;
+            position: relative;
+            overflow: hidden;
+            background: var(--gradient-dark);
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 215, 0, 0.05) 100%);
+            color: rgba(255, 255, 255, 0.6);
+            transition: all var(--transition-normal);
+        }
+
+        .portfolio-item:hover .image-placeholder {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(255, 215, 0, 0.1) 100%);
+            color: var(--primary-gold);
+        }
+
+        .placeholder-icon {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .placeholder-text {
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .portfolio-content {
+            padding: 2rem;
+        }
+
+        .portfolio-title {
+            color: var(--primary-gold);
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .portfolio-category {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .portfolio-description {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .portfolio-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tech-badge {
+            background: rgba(255, 215, 0, 0.1);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--primary-gold);
+        }
+
+        .portfolio-cta {
+            text-align: center;
+            margin-top: 4rem;
+            padding: 3rem 2rem;
+            background: rgba(255, 215, 0, 0.05);
+            border-radius: var(--border-radius-lg);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+
+        .cta-text {
+            font-size: 1.3rem;
+            color: var(--white);
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--gradient-dark);
+            position: relative;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+
+        .contact-info {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .contact-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: var(--border-radius-lg);
+            padding: 2rem;
+            text-align: center;
+            transition: all var(--transition-normal);
+        }
+
+        .contact-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--primary-gold);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .contact-card h3 {
+            color: var(--primary-gold);
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-card p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 1rem;
+        }
+
+        .contact-link {
+            color: var(--primary-gold);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all var(--transition-fast);
+        }
+
+        .contact-link:hover {
+            color: var(--white);
+            text-decoration: underline;
+        }
+
+        .contact-text {
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        .contact-form-container {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: var(--border-radius-lg);
+            padding: 2.5rem;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            color: var(--primary-gold);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: var(--border-radius-sm);
+            padding: 1rem;
+            color: var(--white);
+            font-size: 1rem;
+            transition: all var(--transition-normal);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-gold);
+            box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.1);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .checkbox-group {
+            flex-direction: row;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: rgba(255, 255, 255, 0.8);
+            cursor: pointer;
+        }
+
+        .checkbox-label input[type="checkbox"] {
+            display: none;
+        }
+
+        .checkbox-custom {
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            border-radius: 4px;
+            background: transparent;
+            position: relative;
+            transition: all var(--transition-fast);
+        }
+
+        .checkbox-label input[type="checkbox"]:checked + .checkbox-custom {
+            background: var(--primary-gold);
+            border-color: var(--primary-gold);
+        }
+
+        .checkbox-label input[type="checkbox"]:checked + .checkbox-custom::after {
+            content: '✓';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: var(--primary-black);
+            font-weight: 700;
+            font-size: 0.8rem;
+        }
+
+        .form-submit {
+            background: var(--gradient-gold);
+            color: var(--primary-black);
+            border: none;
+            padding: 1.25rem 2rem;
+            border-radius: var(--border-radius-lg);
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .form-submit::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, var(--white) 0%, var(--accent-gold) 100%);
+            opacity: 0;
+            transition: opacity var(--transition-normal);
+        }
+
+        .form-submit:hover::before {
+            opacity: 1;
+        }
+
+        .form-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .form-submit span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .form-note {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.85rem;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .error-message {
+            color: #ff6b6b;
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+            display: none;
+        }
+
+        .error-message.show {
+            display: block;
         }
 
         /* Footer */
@@ -992,6 +1602,25 @@
             .services-grid {
                 grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             }
+
+            .team-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 2rem;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
         }
 
         @media screen and (max-width: 768px) {
@@ -1051,6 +1680,51 @@
             .hero-content {
                 padding: 2rem 1rem;
             }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .portfolio-filter {
+                gap: 0.5rem;
+            }
+
+            .filter-btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.8rem;
+            }
+
+            .contact-info {
+                gap: 1.5rem;
+            }
+
+            .contact-card {
+                padding: 1.5rem;
+            }
+
+            .contact-form-container {
+                padding: 2rem;
+            }
+
+            .cta-buttons {
+                gap: 1rem;
+            }
+
+            .cta-primary,
+            .cta-secondary {
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
+
+            .social-cta-section {
+                padding: 2rem 1rem;
+            }
         }
 
         @media screen and (max-width: 480px) {
@@ -1063,7 +1737,9 @@
             }
 
             .service-card,
-            .social-card {
+            .social-card,
+            .team-card,
+            .contact-card {
                 padding: 2rem;
             }
 
@@ -1076,9 +1752,51 @@
                 font-size: 0.8rem;
             }
 
-            .cta-primary {
+            .cta-primary,
+            .cta-secondary {
                 padding: 1rem 2rem;
                 font-size: 1rem;
+            }
+
+            .team-skills,
+            .portfolio-tech {
+                gap: 0.5rem;
+            }
+
+            .skill-tag,
+            .tech-badge {
+                padding: 0.25rem 0.75rem;
+                font-size: 0.8rem;
+            }
+
+            .portfolio-filter {
+                justify-content: flex-start;
+                overflow-x: auto;
+                padding-bottom: 0.5rem;
+            }
+
+            .portfolio-filter::-webkit-scrollbar {
+                height: 4px;
+            }
+
+            .portfolio-filter::-webkit-scrollbar-track {
+                background: rgba(255, 215, 0, 0.1);
+                border-radius: 2px;
+            }
+
+            .portfolio-filter::-webkit-scrollbar-thumb {
+                background: var(--primary-gold);
+                border-radius: 2px;
+            }
+
+            .contact-form {
+                gap: 1rem;
+            }
+
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                padding: 0.875rem;
             }
         }
 
@@ -1160,10 +1878,16 @@
                     <a href="#services" class="nav-link" role="menuitem">Services</a>
                 </li>
                 <li role="none">
+                    <a href="#team" class="nav-link" role="menuitem">Team</a>
+                </li>
+                <li role="none">
+                    <a href="#portfolio" class="nav-link" role="menuitem">Portfolio</a>
+                </li>
+                <li role="none">
                     <a href="#about" class="nav-link" role="menuitem">About</a>
                 </li>
                 <li role="none">
-                    <a href="#social" class="nav-link" role="menuitem">Social</a>
+                    <a href="#contact" class="nav-link" role="menuitem">Contact</a>
                 </li>
             </ul>
 
@@ -1297,6 +2021,226 @@
             </div>
         </section>
 
+        <!-- Team Section -->
+        <section id="team" class="team section-padding" role="region" aria-labelledby="team-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="team-title" class="section-title">Our Core Pillars</h2>
+                    <p class="section-subtitle lead">
+                        Meet the passionate creators behind Wijaksara Studio - three talented individuals 
+                        dedicated to bringing your digital dreams to life
+                    </p>
+                </div>
+
+                <div class="team-grid">
+                    <article class="team-card fade-in">
+                        <div class="team-avatar">
+                            <div class="avatar-placeholder">🎮</div>
+                        </div>
+                        <div class="team-info">
+                            <h3 class="team-name">Putra Abdul Azis</h3>
+                            <p class="team-alias">PxZenon</p>
+                            <p class="team-role">Studio Leader & Lead Developer</p>
+                            <p class="team-description">
+                                Visionary leader specializing in Unity game development and Flutter mobile applications. 
+                                Drives the studio's technical direction and ensures project excellence from concept to completion.
+                            </p>
+                            <div class="team-skills">
+                                <span class="skill-tag">Unity</span>
+                                <span class="skill-tag">Flutter</span>
+                                <span class="skill-tag">Leadership</span>
+                                <span class="skill-tag">Project Management</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="team-card fade-in">
+                        <div class="team-avatar">
+                            <div class="avatar-placeholder">🎨</div>
+                        </div>
+                        <div class="team-info">
+                            <h3 class="team-name">Ramadhan Naiel</h3>
+                            <p class="team-alias">DraxxNoName</p>
+                            <p class="team-role">Lead Artist & Animator</p>
+                            <p class="team-description">
+                                Master artisan crafting stunning 2D and 3D visuals that bring characters and worlds to life. 
+                                Specializes in creating captivating art that tells compelling stories through visual excellence.
+                            </p>
+                            <div class="team-skills">
+                                <span class="skill-tag">2D Art</span>
+                                <span class="skill-tag">3D Modeling</span>
+                                <span class="skill-tag">Animation</span>
+                                <span class="skill-tag">Blender</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="team-card fade-in">
+                        <div class="team-avatar">
+                            <div class="avatar-placeholder">💻</div>
+                        </div>
+                        <div class="team-info">
+                            <h3 class="team-name">Hulyo Fernandes Han</h3>
+                            <p class="team-alias">Hulxo</p>
+                            <p class="team-role">Full-Stack Developer</p>
+                            <p class="team-description">
+                                Versatile programmer building robust web applications and seamless user experiences. 
+                                Expert in modern web technologies with a keen eye for performance and user interface design.
+                            </p>
+                            <div class="team-skills">
+                                <span class="skill-tag">Laravel</span>
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">Tailwind CSS</span>
+                                <span class="skill-tag">Web Development</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio section-padding fade-in" role="region" aria-labelledby="portfolio-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="portfolio-title" class="section-title">Our Creative Works</h2>
+                    <p class="section-subtitle lead">
+                        Explore our diverse portfolio of games, applications, and digital experiences 
+                        that showcase our commitment to quality and innovation
+                    </p>
+                </div>
+
+                <div class="portfolio-filter">
+                    <button class="filter-btn active" data-filter="*">All Projects</button>
+                    <button class="filter-btn" data-filter="games">Games</button>
+                    <button class="filter-btn" data-filter="apps">Mobile Apps</button>
+                    <button class="filter-btn" data-filter="web">Web Projects</button>
+                    <button class="filter-btn" data-filter="art">Art & Animation</button>
+                </div>
+
+                <div class="portfolio-grid">
+                    <article class="portfolio-item fade-in" data-category="games">
+                        <div class="portfolio-image">
+                            <div class="image-placeholder">
+                                <span class="placeholder-icon">🎮</span>
+                                <span class="placeholder-text">Game Project</span>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">Upcoming Game Project</h3>
+                            <p class="portfolio-category">Unity • 2D Game</p>
+                            <p class="portfolio-description">An exciting indie game currently in development, showcasing our creative vision and technical expertise.</p>
+                            <div class="portfolio-tech">
+                                <span class="tech-badge">Unity</span>
+                                <span class="tech-badge">C#</span>
+                                <span class="tech-badge">2D Art</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="portfolio-item fade-in" data-category="apps">
+                        <div class="portfolio-image">
+                            <div class="image-placeholder">
+                                <span class="placeholder-icon">📱</span>
+                                <span class="placeholder-text">Mobile App</span>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">Flutter Mobile Solutions</h3>
+                            <p class="portfolio-category">Flutter • Cross-Platform</p>
+                            <p class="portfolio-description">Custom mobile applications built with Flutter, delivering native performance across iOS and Android platforms.</p>
+                            <div class="portfolio-tech">
+                                <span class="tech-badge">Flutter</span>
+                                <span class="tech-badge">Dart</span>
+                                <span class="tech-badge">Cross-Platform</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="portfolio-item fade-in" data-category="web">
+                        <div class="portfolio-image">
+                            <div class="image-placeholder">
+                                <span class="placeholder-icon">🌐</span>
+                                <span class="placeholder-text">Web Project</span>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">Laravel Web Applications</h3>
+                            <p class="portfolio-category">Laravel • Full-Stack</p>
+                            <p class="portfolio-description">Robust web applications and content management systems built with Laravel framework and modern frontend technologies.</p>
+                            <div class="portfolio-tech">
+                                <span class="tech-badge">Laravel</span>
+                                <span class="tech-badge">PHP</span>
+                                <span class="tech-badge">MySQL</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="portfolio-item fade-in" data-category="art">
+                        <div class="portfolio-image">
+                            <div class="image-placeholder">
+                                <span class="placeholder-icon">🎨</span>
+                                <span class="placeholder-text">Art & Animation</span>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">3D Character Design</h3>
+                            <p class="portfolio-category">Blender • 3D Art</p>
+                            <p class="portfolio-description">Stunning 3D character models and animations created for games and digital media, showcasing artistic excellence.</p>
+                            <div class="portfolio-tech">
+                                <span class="tech-badge">Blender</span>
+                                <span class="tech-badge">3D Modeling</span>
+                                <span class="tech-badge">Animation</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="portfolio-item fade-in" data-category="games art">
+                        <div class="portfolio-image">
+                            <div class="image-placeholder">
+                                <span class="placeholder-icon">🖼️</span>
+                                <span class="placeholder-text">Pixel Art</span>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">Pixel Art Collection</h3>
+                            <p class="portfolio-category">Aseprite • 2D Art</p>
+                            <p class="portfolio-description">Detailed pixel art assets and sprites for indie games, combining retro aesthetics with modern design principles.</p>
+                            <div class="portfolio-tech">
+                                <span class="tech-badge">Aseprite</span>
+                                <span class="tech-badge">Pixel Art</span>
+                                <span class="tech-badge">Game Assets</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="portfolio-item fade-in" data-category="web apps">
+                        <div class="portfolio-image">
+                            <div class="image-placeholder">
+                                <span class="placeholder-icon">⚡</span>
+                                <span class="placeholder-text">Portfolio Site</span>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">Wijaksara Studio Website</h3>
+                            <p class="portfolio-category">HTML • CSS • JavaScript</p>
+                            <p class="portfolio-description">Our own studio website featuring modern design, performance optimization, and comprehensive SEO implementation.</p>
+                            <div class="portfolio-tech">
+                                <span class="tech-badge">HTML5</span>
+                                <span class="tech-badge">CSS3</span>
+                                <span class="tech-badge">JavaScript</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="portfolio-cta">
+                    <p class="cta-text">Have a project in mind? Let's bring your vision to life!</p>
+                    <a href="#contact" class="cta-secondary">Start Your Project</a>
+                </div>
+            </div>
+        </section>
+
         <!-- About Section -->
         <section id="about" class="about section-padding" role="region" aria-labelledby="about-title">
             <div class="container">
@@ -1364,17 +2308,141 @@
             </div>
         </section>
 
+        <!-- Contact Section -->
+        <section id="contact" class="contact section-padding" role="region" aria-labelledby="contact-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="contact-title" class="section-title">Let's Create Together</h2>
+                    <p class="section-subtitle lead">
+                        Ready to bring your digital dreams to life? Get in touch with us and let's discuss 
+                        how we can help you achieve your creative and technical goals.
+                    </p>
+                </div>
+
+                <div class="contact-content">
+                    <div class="contact-info slide-in-left">
+                        <div class="contact-card">
+                            <div class="contact-icon">📧</div>
+                            <h3>Email Us</h3>
+                            <p>Get in touch for project inquiries</p>
+                            <a href="mailto:hello@wijaksara.studio" class="contact-link">hello@wijaksara.studio</a>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon">💼</div>
+                            <h3>Freelance Services</h3>
+                            <p>Hire us on Fiverr for professional services</p>
+                            <a href="https://www.fiverr.com/wijaksarastudio" target="_blank" rel="noopener noreferrer" class="contact-link">
+                                View Fiverr Profile
+                            </a>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon">🌏</div>
+                            <h3>Location</h3>
+                            <p>Proudly based in Indonesia</p>
+                            <span class="contact-text">Indonesia • Worldwide Services</span>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon">⏰</div>
+                            <h3>Response Time</h3>
+                            <p>We typically respond within</p>
+                            <span class="contact-text">24 hours</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container slide-in-right">
+                        <form class="contact-form" id="contactForm" novalidate>
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required aria-describedby="name-error">
+                                <span class="error-message" id="name-error"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required aria-describedby="email-error">
+                                <span class="error-message" id="email-error"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Project Type</label>
+                                <select id="subject" name="subject">
+                                    <option value="">Select a service</option>
+                                    <option value="game-development">Game Development</option>
+                                    <option value="mobile-app">Mobile App Development</option>
+                                    <option value="web-development">Web Development</option>
+                                    <option value="art-animation">2D/3D Art & Animation</option>
+                                    <option value="consultation">Consultation</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="budget">Project Budget (USD)</label>
+                                <select id="budget" name="budget">
+                                    <option value="">Select budget range</option>
+                                    <option value="under-1000">Under $1,000</option>
+                                    <option value="1000-5000">$1,000 - $5,000</option>
+                                    <option value="5000-10000">$5,000 - $10,000</option>
+                                    <option value="10000-25000">$10,000 - $25,000</option>
+                                    <option value="25000-plus">$25,000+</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Project Details *</label>
+                                <textarea id="message" name="message" rows="6" required 
+                                          placeholder="Tell us about your project, timeline, and specific requirements..." 
+                                          aria-describedby="message-error"></textarea>
+                                <span class="error-message" id="message-error"></span>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="newsletter" name="newsletter">
+                                    <span class="checkbox-custom"></span>
+                                    Subscribe to our newsletter for updates and tips
+                                </label>
+                            </div>
+
+                            <button type="submit" class="form-submit">
+                                <span>Send Message</span>
+                                <span class="submit-icon">✨</span>
+                            </button>
+
+                            <p class="form-note">
+                                * Required fields. We respect your privacy and will never share your information.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Social Media Section -->
         <section id="social" class="social-media section-padding fade-in" role="region" aria-labelledby="social-title">
             <div class="container">
                 <div class="section-header">
                     <h2 id="social-title" class="section-title">Connect With Us</h2>
                     <p class="section-subtitle lead">
-                        Follow our journey, see our latest works, and join our creative community
+                        Follow our journey, see our latest works, and join our creative community across multiple platforms
                     </p>
                 </div>
 
                 <div class="social-grid">
+                    <a href="https://www.fiverr.com/wijaksarastudio" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="social-card social-card-featured fade-in"
+                       aria-label="Hire Wijaksara Studio on Fiverr">
+                        <div class="social-icon" role="img" aria-label="Fiverr">💼</div>
+                        <h3 class="social-name">Fiverr</h3>
+                        <p class="social-handle">@wijaksarastudio</p>
+                        <div class="social-cta">Hire Us Now</div>
+                    </a>
+                    
                     <a href="https://www.instagram.com/wijaksara.studio" 
                        target="_blank" 
                        rel="noopener noreferrer" 
@@ -1405,6 +2473,21 @@
                         <p class="social-handle">@WIJAKSARASTUDIO</p>
                     </a>
                 </div>
+
+                <div class="social-cta-section">
+                    <h3>Ready to Work Together?</h3>
+                    <p>Join hundreds of satisfied clients who have brought their visions to life with Wijaksara Studio</p>
+                    <div class="cta-buttons">
+                        <a href="https://www.fiverr.com/wijaksarastudio" target="_blank" rel="noopener noreferrer" class="cta-primary">
+                            <span>View Fiverr Services</span>
+                            <span>💼</span>
+                        </a>
+                        <a href="#contact" class="cta-secondary">
+                            <span>Contact Directly</span>
+                            <span>📧</span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -1414,18 +2497,15 @@
         <div class="container">
             <div class="footer-content">
                 <nav class="footer-links" role="navigation" aria-label="Footer navigation">
-                    <a href="https://www.instagram.com/wijaksara.studio" 
+                    <a href="#services" class="footer-link">Services</a>
+                    <a href="#team" class="footer-link">Team</a>
+                    <a href="#portfolio" class="footer-link">Portfolio</a>
+                    <a href="#about" class="footer-link">About</a>
+                    <a href="#contact" class="footer-link">Contact</a>
+                    <a href="https://www.fiverr.com/wijaksarastudio" 
                        target="_blank" 
                        rel="noopener noreferrer" 
-                       class="footer-link">Instagram</a>
-                    <a href="https://www.tiktok.com/@wijaksara.studio" 
-                       target="_blank" 
-                       rel="noopener noreferrer" 
-                       class="footer-link">TikTok</a>
-                    <a href="https://www.youtube.com/@WIJAKSARASTUDIO" 
-                       target="_blank" 
-                       rel="noopener noreferrer" 
-                       class="footer-link">YouTube</a>
+                       class="footer-link">Fiverr</a>
                 </nav>
                 
                 <div class="footer-text">
@@ -1445,7 +2525,7 @@
 
             // Loading Screen Management
             const loadingScreen = document.getElementById('loadingScreen');
-            const minimumLoadingTime = 1500; // Minimum loading time for UX
+            const minimumLoadingTime = 500; // Reduced loading time for better UX
             const startTime = performance.now();
 
             function hideLoadingScreen() {
@@ -1762,6 +2842,246 @@
 
             // Social Media Link Analytics (placeholder)
             function trackSocialClick(platform) {
+                // You can integrate with your analytics service here
+                console.log(`Social media click: ${platform}`);
+            }
+
+            // Add click tracking to social links
+            document.querySelectorAll('.social-card').forEach(card => {
+                card.addEventListener('click', function() {
+                    const platform = this.querySelector('.social-name').textContent;
+                    trackSocialClick(platform);
+                });
+            });
+
+            // Portfolio Filter Functionality
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+            function filterPortfolio(category) {
+                portfolioItems.forEach(item => {
+                    const itemCategories = item.getAttribute('data-category').split(' ');
+                    
+                    if (category === '*' || itemCategories.includes(category)) {
+                        item.style.display = 'block';
+                        item.classList.add('fade-in');
+                        setTimeout(() => {
+                            if (observer) observer.observe(item);
+                        }, 100);
+                    } else {
+                        item.style.display = 'none';
+                        item.classList.remove('fade-in');
+                    }
+                });
+            }
+
+            // Add event listeners to filter buttons
+            filterButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(b => b.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Filter portfolio items
+                    const category = this.getAttribute('data-filter');
+                    filterPortfolio(category);
+                });
+            });
+
+            // Contact Form Functionality
+            const contactForm = document.getElementById('contactForm');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Clear previous errors
+                    document.querySelectorAll('.error-message').forEach(error => {
+                        error.classList.remove('show');
+                    });
+                    
+                    let isValid = true;
+                    
+                    // Validate required fields
+                    const requiredFields = ['name', 'email', 'message'];
+                    requiredFields.forEach(fieldName => {
+                        const field = document.getElementById(fieldName);
+                        const errorElement = document.getElementById(`${fieldName}-error`);
+                        
+                        if (!field.value.trim()) {
+                            errorElement.textContent = 'This field is required';
+                            errorElement.classList.add('show');
+                            isValid = false;
+                        }
+                    });
+                    
+                    // Validate email
+                    const emailField = document.getElementById('email');
+                    const emailError = document.getElementById('email-error');
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    
+                    if (emailField.value.trim() && !emailRegex.test(emailField.value)) {
+                        emailError.textContent = 'Please enter a valid email address';
+                        emailError.classList.add('show');
+                        isValid = false;
+                    }
+                    
+                    if (isValid) {
+                        // Show success message (you can integrate with your backend here)
+                        const submitBtn = this.querySelector('.form-submit');
+                        const originalText = submitBtn.innerHTML;
+                        
+                        submitBtn.innerHTML = '<span>Sending...</span><span>⏳</span>';
+                        submitBtn.disabled = true;
+                        
+                        // Simulate form submission
+                        setTimeout(() => {
+                            submitBtn.innerHTML = '<span>Message Sent!</span><span>✅</span>';
+                            
+                            setTimeout(() => {
+                                submitBtn.innerHTML = originalText;
+                                submitBtn.disabled = false;
+                                contactForm.reset();
+                            }, 2000);
+                        }, 1500);
+                        
+                        // Track form submission
+                        console.log('Contact form submitted');
+                    }
+                });
+                
+                // Real-time validation
+                const inputs = contactForm.querySelectorAll('input[required], textarea[required]');
+                inputs.forEach(input => {
+                    input.addEventListener('blur', function() {
+                        const errorElement = document.getElementById(`${this.name}-error`);
+                        
+                        if (!this.value.trim()) {
+                            errorElement.textContent = 'This field is required';
+                            errorElement.classList.add('show');
+                        } else {
+                            errorElement.classList.remove('show');
+                        }
+                    });
+                });
+            }
+
+            // Team Card Animations
+            const teamCards = document.querySelectorAll('.team-card');
+            teamCards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.2}s`;
+            });
+
+            // Portfolio Item Animations
+            const portfolioCards = document.querySelectorAll('.portfolio-item');
+            portfolioCards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.1}s`;
+            });
+
+            // Enhanced Intersection Observer for new sections
+            const newSectionsObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        
+                        // Trigger staggered animations for grid items
+                        if (entry.target.classList.contains('team-grid') || 
+                            entry.target.classList.contains('portfolio-grid')) {
+                            const items = entry.target.querySelectorAll('.team-card, .portfolio-item');
+                            items.forEach((item, index) => {
+                                setTimeout(() => {
+                                    item.classList.add('visible');
+                                }, index * 100);
+                            });
+                        }
+                    }
+                });
+            }, {
+                root: null,
+                rootMargin: '-10% 0px -10% 0px',
+                threshold: 0.1
+            });
+
+            // Observe new sections
+            const newSections = document.querySelectorAll('.team, .portfolio, .contact, .team-grid, .portfolio-grid');
+            newSections.forEach(section => newSectionsObserver.observe(section));
+
+            // Smooth scroll offset adjustment for new navigation items
+            function updateScrollOffset() {
+                const headerHeight = header ? header.offsetHeight : 80;
+                return headerHeight + 20;
+            }
+
+            // Enhanced smooth scrolling for all anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href').slice(1);
+                    const targetElement = document.getElementById(targetId);
+                    
+                    if (targetElement) {
+                        const offsetTop = targetElement.offsetTop - updateScrollOffset();
+                        
+                        window.scrollTo({
+                            top: Math.max(0, offsetTop),
+                            behavior: 'smooth'
+                        });
+
+                        // Close mobile menu if open
+                        if (navMenu && navMenu.classList.contains('active')) {
+                            mobileMenuBtn.classList.remove('active');
+                            navMenu.classList.remove('active');
+                            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                        }
+
+                        // Update active nav link
+                        updateActiveNavLink(targetId);
+                    }
+                });
+            });
+
+            // CTA Button Click Tracking
+            document.querySelectorAll('.cta-primary, .cta-secondary').forEach(cta => {
+                cta.addEventListener('click', function() {
+                    const ctaText = this.textContent.trim();
+                    console.log(`CTA clicked: ${ctaText}`);
+                });
+            });
+
+            // Form Field Focus Enhancement
+            const formFields = document.querySelectorAll('.contact-form input, .contact-form select, .contact-form textarea');
+            formFields.forEach(field => {
+                field.addEventListener('focus', function() {
+                    this.parentElement.classList.add('focused');
+                });
+                
+                field.addEventListener('blur', function() {
+                    if (!this.value) {
+                        this.parentElement.classList.remove('focused');
+                    }
+                });
+            });
+
+            // Initialize animations for existing elements
+            function initializeAnimations() {
+                // Add staggered animations to service cards
+                const serviceCards = document.querySelectorAll('.service-card');
+                serviceCards.forEach((card, index) => {
+                    card.style.animationDelay = `${index * 0.2}s`;
+                });
+
+                // Add staggered animations to feature items
+                const featureItems = document.querySelectorAll('.feature-item');
+                featureItems.forEach((item, index) => {
+                    item.style.animationDelay = `${index * 0.1}s`;
+                });
+            }
+
+            // Call initialization
+            initializeAnimations();ction trackSocialClick(platform) {
                 // You can implement analytics tracking here
                 console.log(`Social media click: ${platform}`);
                 
